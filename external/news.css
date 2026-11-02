@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* General style css */
+/* text sizes */
+.hero-text {
+    font-size: 70px;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    line-height: 1;
+}
+.title-text {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+.m-title-text {
+    font-size: 45px;
+    font-weight: 200;
+    padding: 3px;
+}
+.sub-heading {
+    font-size: 30px;
+    font-weight: 250;
+}
+.small-title-text {
+    font-size: 22px;
+}
+.para-text {
+    font-size: 17.5px;
+    letter-spacing: 0.5px;
+}
+
+/* default colors */
+.red-bg {
+    background-color: #bc1400;
+}
+.red-text {
+    color: #bc1400;
+}
+.blue-bg {
+    background-color: #134989;
+}
+.light-blue-bg {
+    background-color: #f1f9ff;
+}
+.blue-text {
+    color: #134989;
+}
+.dark-bg {
+    background-color: #1e1e1b;
+}
+.dark-text {
+    color: #1e1e1b;
+}
+
+/* google font */
+.barlow-condensed-thin {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.barlow-condensed-extralight {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.barlow-condensed-light {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.barlow-condensed-regular {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.barlow-condensed-medium {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.barlow-condensed-semibold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.barlow-condensed-bold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.barlow-condensed-extrabold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.barlow-condensed-black {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.barlow-condensed-thin-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+.barlow-condensed-extralight-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+.barlow-condensed-light-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+.barlow-condensed-regular-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.barlow-condensed-medium-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+.barlow-condensed-semibold-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+.barlow-condensed-bold-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+.barlow-condensed-extrabold-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+.barlow-condensed-black-italic {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* News Section */
+.news-section {
+    padding: 65px 0;
+    padding-top: 170px;
+    background: #f5f5f3;
+}
+.news-section .section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.news-section .eyebrow {
+    color: #bc1400;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.news-section .section-heading h2 {
+    font-size: clamp(35px, 5vw, 48px);
+    font-weight: 800;
+    margin: 4px 0 10px;
+}
+.news-section .section-heading p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+    font-size: 19px;
+}
+.news-card {
+    height: 100%;
+    overflow: hidden;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+.news-image {
+    position: relative;
+    height: 240px;
+    margin: 10px 10px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.news-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.news-card:hover .news-image img {
+    transform: scale(1.04);
+}
+.read-more-btn {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+    padding: 5px 12px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: rgba(30, 30, 27, 0.35);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.2;
+    cursor: pointer;
+    backdrop-filter: blur(3px);
+    transition: background 0.2s;
+}
+.read-more-btn:hover {
+    background: #bc1400;
+}
+.news-content {
+    padding: 12px 15px 15px;
+}
+.news-content h3 {
+    margin: 0 0 7px;
+    color: #134989;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.news-date {
+    margin: 0;
+    color: #bc1400;
+    font-size: 14px;
+}
+.news-modal {
+    overflow: hidden;
+    border: none;
+    border-radius: 14px;
+}
+.news-modal .modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+}
+.news-modal .modal-title {
+    padding-right: 12px;
+    color: #134989;
+    font-size: 29px;
+    font-weight: 700;
+}
+.news-modal .modal-body {
+    padding: 24px;
+}
+.modal-news-image {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.news-article-text {
+    margin-top: 18px;
+    color: #333;
+    font-size: 19px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+.news-source-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #134989;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.news-source-link:hover {
+    color: #bc1400;
+    text-decoration: underline;
+}
+.news-modal .modal-footer {
+    padding: 15px 24px;
+    border-top: 1px solid #eee;
+}
+.modal-close-btn {
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .news-section {
+        padding: 45px 0;
+    }
+    .news-image {
+        height: 220px;
+    }
+    .news-content h3 {
+        font-size: 20px;
+    }
+    .news-modal .modal-title {
+        font-size: 24px;
+    }
+    .news-modal .modal-body {
+        padding: 18px;
+    }
+    .modal-news-image {
+        max-height: 260px;
+    }
+}

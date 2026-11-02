@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent News</title>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="external/news.css">
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <!-- Web Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Brand/Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="image/LIFE9-Logo.png" class="img-fluid logo-img" alt="LIFE9 Logo">
+            </a>
+            <a class="navbar-brand m-title-text fw-bold" href="index.html">LIFE9</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="aboutus.html">About us</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle text-white-50" href="#" id="disasterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-exclamation-triangle nav-icon"></i>Disasters</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="disasterDropdown">
+                            <li><a class="dropdown-item" href="types.html">Disaster Types</a></li>
+                            <li><a class="dropdown-item" href="high_risk.html">High-risk Areas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item active" href="news.html" aria-current="page">Recent News</a></li>
+                            <li><a class="dropdown-item" href="recovery.html">Response & Recovery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+
+                <!-- Login/signup -->
+                <div class="d-flex align-items-center gap-2 justify-content-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign in</a>
+                    <a href="signup.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Recent news -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">STAY INFORMED</p>
+                <h2>Latest Disaster News</h2>
+                <p>Stay updated on disasters, their impacts and the latest developments affecting communities in Myanmar.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Flooding -->
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://i.ucanews.com/ucanews/uploads/2026/10/check-floods-kill-41-in-myanmars-tanintharyi-region-6abf419c800d2_600.jpeg" alt="Floodwater covering a residential area">
+                            <button class="read-more-btn" data-article="0" data-bs-toggle="modal" data-bs-target="#newsModal">Tap to read more <i class="bi bi-hand-index-thumb"></i></button>
+                        </div>
+                        <div class="news-content">
+                            <h3>Floods Kill 41 in Myanmar's Tanintharyi Region</h3>
+                            <p class="news-date">Published Date: Oct 2, 2026</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- 7.7 Magnitude Earthquake -->
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://www.unhcr.org/hk/sites/hk/files/styles/standard_08/public/2025-04/myanmar_emergency_1_1.webp?h=15b8563a&itok=RjEFv5Gh&t=1743752223" alt="Earthquake damage">
+                            <button class="read-more-btn" data-article="1" data-bs-toggle="modal" data-bs-target="#newsModal">Tap to read more <i class="bi bi-hand-index-thumb"></i></button>
+                        </div>
+                        <div class="news-content">
+                            <h3>7.7 Magnitude Earthquake in Myanmar</h3>
+                            <p class="news-date">Published Date: March 28, 2025</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- WHO Heatwave Warning -->
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1200&q=85" alt="Landscape of climate and weather conditions">
+                            <button class="read-more-btn" data-article="2" data-bs-toggle="modal" data-bs-target="#newsModal">Tap to read more <i class="bi bi-hand-index-thumb"></i></button>
+                        </div>
+                        <div class="news-content">
+                            <h3>WMO Warns of Global Heat and Extreme Weather Risks as El Niño Strengthens</h3>
+                            <p class="news-date">Published Date: Oct 8, 2026</p>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- South Myanmar Floods -->
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://www.mekongeye.com/wp-content/uploads/2026/10/%E1%80%95%E1%80%80%E1%80%AC%E1%80%9B%E1%80%AE.jpg" alt="Flooding after heavy rainfall">
+                            <button class="read-more-btn" data-article="3" data-bs-toggle="modal" data-bs-target="#newsModal">Tap to read more <i class="bi bi-hand-index-thumb"></i></button>
+                        </div>
+                        <div class="news-content">
+                            <h3>South Myanmar Floods and Landslides Kill at Least 8</h3>
+                            <p class="news-date">Published Date: September 28, 2026</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Jade Mine Landslide -->
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://www.thedailystar.net/sites/default/files/styles/big_1/public/2026-06/Myanmar%20jade%20mine%20landslide.jpg?h=ec041e41" alt="Damaged terrain">
+                            <button class="read-more-btn" data-article="4" data-bs-toggle="modal" data-bs-target="#newsModal">Tap to read more <i class="bi bi-hand-index-thumb"></i></button>
+                        </div>
+                        <div class="news-content">
+                            <h3>Myanmar Jade Mine Landslide Kills Five, 15 Missing</h3>
+                            <p class="news-date">Published Date: June 30, 2026</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Myanmar Red Cross Flood Response -->
+                <div class="col-md-6">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="https://www.redcross.org.mm/wp-content/uploads/2026/10/viber_image_2026-10-06_23-02-36-948-1024x1024.jpg" alt="Floodwater covering an area after heavy rainfall">
+                            <button class="read-more-btn" data-article="5" data-bs-toggle="modal" data-bs-target="#newsModal">
+                                Tap to read more <i class="bi bi-hand-index-thumb"></i>
+                            </button>
+                        </div>
+                        <div class="news-content">
+                            <h3>Myanmar Red Cross Supports Flood-Affected Communities</h3>
+                            <p class="news-date">Published Date: October 7, 2026</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- News article modal -->
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content news-modal">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="newsModalTitle">News Article</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="newsModalImage" class="modal-news-image" alt="">
+                    <p class="news-date mt-3" id="newsModalDate"></p>
+                    <div id="newsModalArticle" class="news-article-text"></div>
+                    <a href="#" id="newsModalSource" class="news-source-link" target="_blank" rel="noopener noreferrer" hidden>Read original report <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="main-btn modal-close-btn" data-bs-dismiss="modal">Close Article</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer-section container-fluid dark-bg">
+        <div class="row g-4">
+            <!-- Logo, description and social links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-3">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <span class="footer-logo-wrap">
+                            <img src="image/LIFE9-Logo.png" alt="LIFE9 logo" class="footer-logo">
+                        </span>
+                        <h3 class="footer-brand-name white-text fw-bold barlow-condensed-regular m-0">LIFE9</h3>
+                    </a>
+                </div>
+                <p class="footer-description white-text barlow-condensed-regular">
+                    The baseline for a secure tomorrow.
+                </p>
+                <div class="footer-social-links d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="footer-media-link">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://web.telegram.org/" aria-label="Telegram" class="footer-media-link">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="https://x.com/" aria-label="X" class="footer-media-link">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Quick Links</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="index.html" class="footer-link white-text">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link white-text">About Us</a></li>
+                        <li><a href="news.html" class="footer-link white-text">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Explore -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Explore</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="types.html" class="footer-link white-text">Types of Disasters</a></li>
+                        <li><a href="high_risk.html" class="footer-link white-text">High-risk Areas</a></li>
+                        <li><a href="faq.html" class="footer-link white-text">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Contact Us</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li>
+                            <a href="tel:+959776964436" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97769 64436
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:life9@gmail.com" class="footer-link white-text">
+                                <i class="bi bi-envelope-fill pe-1"></i> life9@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/PkofouHPTJ3KPXVG9" class="footer-link white-text">
+                                <i class="bi bi-geo-alt-fill pe-1"></i> Thukha Chanthar Condo, Thumana 3rd street, Yangon, Myanmar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer divider -->
+        <hr class="footer-line my-4">
+
+        <!-- Copyright and policies -->
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        LIFE9 © 2026 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end footer-ref-policy-text">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        <a href="policy.html" class="white-text footer-link">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSbL_c72sZwKxrASTaIBeT9byPQWptYKzQbmNh1aTp_PRlJlacBZF-W8RmGcepH4gSk0lrW5FfQBq44/pub" class="white-text footer-link">References</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!-- External JS -->
+    <script src="external/news.js"></script>
+    <!-- External JS -->
+    <script src="external/recovery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

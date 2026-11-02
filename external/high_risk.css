@@ -1,0 +1,438 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: black;
+    background-color: white;
+}
+
+.forest-header {
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 20, 35, 0.2), rgba(0, 20, 35, 0.2)), url("/image/forest.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.intro-section {
+    background-color: white;
+    padding: 0 7% 35px;
+}
+
+.intro-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.intro-text {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.section-label {
+    display: inline-block;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+}
+
+.intro-text h1 {
+    color: navy;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    color: navy;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 360px;
+    margin-bottom: 12px;
+}
+
+.red-line {
+    height: 2px;
+    width: 50px;
+    background: lightcoral;
+}
+
+/* Introduction Image */
+.map-image {
+    width: 44%;
+    max-width: 300px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: -25px;
+}
+
+.risk-section {
+    background-color: black;
+    color: white;
+    padding: 22px 20px 30px;
+}
+
+.risk-heading {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+#item1 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_czdIv2a3STtFaNvqAqWjzhmiUt0eonpCoa2e9N3-w&s=10);
+}
+
+#item2 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyLLvmhLy94MOxi_Zj-2ATBuSglYvndnqtkPY0avaFNrsLF4MsY02jg5wP&s=10);
+}
+
+#item3 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRohrKKsXTmNK-sdOEszTeCJDIwOb3fjd2F3N-Ev8ySmbVV8k7r6qLICea7&s=10);
+}
+
+#item4 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbbx6JPV592-ySFGbePQTKDulUkNbR8PUUchD5VaJf3JoYvuIuTBZXD7c&s=10);
+}
+
+#item5 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA3F-0nqidG1Hfv2ZSG8IBllgXCQwnT1bOEp8810dVMkN7ydTX8hfFIWg&s=10);
+}
+
+#item6 {
+    background-image: url(https://myanmar.un.org/sites/default/files/styles/large/public/2025-04/IMG_2037.jpg?h=527a63ea&itok=5Rigyr6W);
+}
+
+#item7 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8kZ3-4-HUH_htCPuSI6dSuaPLz1Mm8kEpQncjVyUXLA&s=10);
+}
+
+#item8 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWu6xRZYOP-QwQJhYsudIW2Ld5f0GU0QTbm1BAt8-YcKNm4A4KfjiRKJcE&s=10);
+}
+
+.carousel {
+    max-width: 650px;
+    margin: auto;
+}
+
+.carousel-inner {
+    padding: 5px 0 35px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.region-background {
+    height: 280px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.region-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.risk-card {
+    position: relative;
+    z-index: 1;
+    width: 290px;
+    max-width: 100%;
+    min-height: 190px;
+    background: rgba(255, 255, 255, 0.96);
+    color: grey;
+    border-radius: 10px;
+    padding: 22px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(220, 95, 75, 0.5);
+}
+
+.risk-card h3 {
+    color: red;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.risk-card p {
+    color: navy;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.carousel-indicators {
+    bottom: 0;
+    margin-bottom: 0;
+    gap: 3px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 4px;
+    margin: 0;
+    border: 0;
+}
+
+.text h1 {
+    font-size: 100px;
+    padding-top: 30px;
+    margin-left: 20px;
+}
+
+.content {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:
+        linear-gradient(rgba(230, 211, 211, 0.169), rgba(230, 211, 211, 0.169)),
+        linear-gradient(rgba(0, 20, 35, 0), rgba(96, 126, 149, 0.2)),
+        url(https://i.pinimg.com/1200x/9c/2c/a8/9c2ca88dad9f63399b9c5cbfb8c4b31d.jpg);
+}
+
+.areas {
+    background-color: #eff9ff;
+    padding: 35px 7%;
+}
+
+.area-heading {
+    color: #174d83;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 15px;
+}
+
+.area-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.area-image {
+    height: 120px;
+    width: 100%;
+}
+
+.area-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.area-info h3 {
+    padding: 20px;
+}
+
+.area-info p {
+    color: #d94d42;
+    padding: 10px;
+    margin-bottom: 7px;
+}
+
+.margin-info p {
+    color: #174d83;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.facts-section {
+    background-color: #eff9ff;
+    padding: 45px 7%;
+}
+
+.facts-heading {
+    text-align: center;
+    color: #174d83;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.facts-heading span {
+    color: #d45b50;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fact-card {
+    height: 260px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.fact-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.fact-card.flipped .fact-card-inner {
+    transform: rotateY(180deg);
+}
+
+.fact-front, .fact-back {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 25px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.fact-front {
+    background-color: #c51b08;
+    color: white;
+}
+
+.fact-front i {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.fact-front p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.fact-front span {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.fact-back {
+    background-color: white;
+    border: 4px solid #c51b08;
+    color: #174d83;
+    transform: rotateY(180deg);
+    display: flex;
+}
+
+.fact-back h3 {
+    color: #c51b08;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.fact-back p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.fact-back span {
+    font-size: 12px;
+    color: grey;
+    margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width) {
+    .intro-row {
+        gap: 20px;
+    }
+
+    .intro-text h1 {
+        font-size: 38px;
+    }
+
+    .area-grid, .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .forest-header {
+        height: 190px;
+    }
+
+    .intro-row {
+        flex-direction: column;
+    }
+
+    .intro-text h1 {
+        font-size: 34px;
+    }
+
+    .intro-text p {
+        max-width: 100%;
+    }
+
+    .map-image {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+        margin-top: 0;
+    }
+
+    .area-grid, .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .text h1 {
+        font-size: 45px;
+    }
+
+    .content {
+        height: 260px;
+    }
+
+    .region-background {
+        height: auto;
+        min-height: 300px;
+    }
+
+    .risk-card {
+        width: 100%;
+    }
+}

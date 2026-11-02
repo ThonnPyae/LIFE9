@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFE9 | Dashboard</title>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="external/general_style_sheet.css">
+    <link rel="stylesheet" href="external/dashboard.css">
+
+    <!-- Web Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+    <main class="dashboard-main light-blue-bg py-4">
+        <div class="container-fluid dashboard-container">
+            <!-- Welcome and Tools -->
+            <div class="row g-4">
+                <!-- Left Side -->
+                <div class="col-lg-7">
+                    <h2 class="welcome-text mb-4">
+                        Welcome, <span id="user-display-name">User</span>
+                    </h2>
+
+                    <h2 class="small-title-text mb-3">
+                        Tools to check out
+                    </h2>
+
+                    <!-- Quiz -->
+                    <div class="tool-card mb-3">
+                        <div>
+                            <h4>Quiz</h4>
+                            <p>3 Questions</p>
+                            <p>
+                                About: Check how likely you are to survive a disaster.
+                            </p>
+                        </div>
+
+                        <a href="#" class="arrow-button red-bg white-text">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="tool-card mb-3">
+                        <div>
+                            <h4>Map</h4>
+                            <p>Your region and disasters</p>
+                            <p>
+                                About: Discover which areas of Myanmar experienced the latest disasters.
+                            </p>
+                        </div>
+
+                        <a href="#" class="arrow-button red-bg white-text">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Report -->
+                    <div class="report-section mt-3">
+                        <div class="report-icon blue-text">
+                            <i class="bi bi-exclamation-square"></i>
+                        </div>
+                        <span>Report your experiences!</span>
+
+                        <a href="#" class="arrow-button red-bg white-text">
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Right Side -->
+                <div class="col-lg-5">
+                    <!-- Weather -->
+                    <div class="weather-card white-bg mb-4">
+                        <div class="weather-top">
+                            <h4 id="weather-temperature">_ _ °C</h4>
+                            <a href="https://open-meteo.com/" target="_blank" rel="noopener">
+                                Link to weather forecast
+                            </a>
+                        </div>
+                        <div class="weather-bottom">
+                            <i class="bi bi-sun-fill" id="weather-icon"></i>
+                            <span id="weather-description">Loading weather...</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="calendar-card white-bg">
+                        <h3 class="small-title-text text-center mb-3">
+                            Calendar
+                        </h3>
+                        <div class="calendar-box">
+                            <div class="calendar-header blue-bg white-text">
+                                <button id="prev-month">
+                                    <i class="bi bi-chevron-left"></i>
+                                </button>
+                                <h3 id="calendar-month"></h3>
+
+                                <button id="next-month">
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+
+                            <div class="calendar-grid" id="calendar-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- To-do list and Quests -->
+            <div class="row g-4 mt-2">
+                <!-- To-do-list -->
+                <div class="col-lg-5">
+                    <div class="bottom-card to-do-card white-bg h-100">
+                        <div class="to-do-heading">
+                            <h2 class="small-title-text">To-do list</h2>
+                            <button id="add-to-do-btn">+ Add</button>
+                        </div>
+                        <br>
+                        <input type="text" id="to-do-input" placeholder="Enter a task..." aria-label="New task">
+                        <ul id="to-do-list-container"></ul>
+                    </div>
+                </div>
+
+                <!-- Quests -->
+                <div class="col-lg-7">
+                    <div class="bottom-card quests-card white-bg h-100">
+                        <h2 class="small-title-text">Quests</h2>
+                        <div class="quest-item">
+                            <label for="quest-1">
+                                Save an emergency authority contact number
+                            </label>
+                            <input type="checkbox" id="quest-1">
+                        </div>
+
+                        <div class="quest-item">
+                            <label for="quest-2">
+                                Check out your map region and understand it
+                            </label>
+                            <input type="checkbox" id="quest-2">
+                        </div>
+
+                        <div class="quest-item">
+                            <label for="quest-3">
+                                Report your experience to LIFE9
+                            </label>
+                            <input type="checkbox" id="quest-3">
+                        </div>
+
+                        <div class="quest-item">
+                            <label for="quest-4">
+                                Prepare an emergency first aid kit
+                            </label>
+                            <input type="checkbox" id="quest-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- External JS -->
+    <script src="external/dashboard.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Risk Areas</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="external/high_risk.css">
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Brand/Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="image/LIFE9-Logo.png" class="img-fluid logo-img" alt="LIFE9 Logo">
+            </a>
+            <a class="navbar-brand m-title-text fw-bold" href="index.html">LIFE9</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="aboutus.html">About us</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle text-white-50" href="#" id="disasterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-exclamation-triangle nav-icon"></i>Disasters</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="disasterDropdown">
+                            <li><a class="dropdown-item" href="types.html">Disaster Types</a></li>
+                            <li><a class="dropdown-item active" href="high_risk.html" aria-current="page">High-risk Areas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="news.html">Recent News</a></li>
+                            <li><a class="dropdown-item" href="recovery.html">Response & Recovery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+
+                <!-- Login/signup -->
+                <div class="d-flex align-items-center gap-2 justify-content-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign in</a>
+                    <a href="signup.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+   
+
+    <!-- background -->
+    <header class="forest-header"></header>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <div class="intro-row">
+            <div class="intro-text">
+                <span class="section-label">
+                    DISASTER RISK
+                </span>
+                <h1>HIGH-RISK AREAS IN MYANMAR</h1>
+                <P>Explore the natural disasters that threaten different regions of Myanmar, discover which communities are most vulnerable, and learn why some areas face greater risks.</P>
+                <div class="red-line"></div>
+            </div>
+            <img class="map-image" src="images/high-risk.png" alt="map">
+        </div>
+    </section>
+
+    <!-- High risk regions -->
+    <section class="risk-section">
+        <h2 class="risk-heading">
+            High-Risk Regions &amp; What They Face
+        </h2>
+        
+        <div id="riskCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#riskCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            </div>
+
+            <!-- Carousel Slides -->
+             <div class="carousel-inner">
+
+                <div class="carousel-item active" id="item1">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Rakhine State</h3>
+                            <p>Exposed to cyclones, storm surges, and coastal flooding.</p>
+                            <p>Coastal communities face threats from severe weather and powerful waves.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" id="item2">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Yangon Region</h3>
+                            <p>Intensive urban flooding, cyclones, and accidental fires.</p>
+                            <p>Overcrowded cities with clogged drainage systems trap seasonal monsoon rains and increase structural fire risks.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" id="item3">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Ayeyarwady Region</h3>
+                            <p>Severe riverine flooding and coastal storm surges.</p>
+                            <p>Low-lying delta terrain sits right at sea level where major rivers bottle up and overflow during heavy monsoon rains.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" id="item4">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Bago Region</h3>
+                            <p>Chronic river flooding and high-impact earthquakes.</p>
+                            <p>Multiple major river basins converge in this flat region while the active Sagaing fault line runs directly underneath.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" id="item5">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Sagaing Region</h3>
+                            <p>Destructive earthquakes, river floods, and severe droughts.</p>
+                            <p>The active Sagaing Fault splits the region open while local weather shifts create a flooded north and a parched south.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" id="item6">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Mandalay & Magway Regions </h3>
+                            <p>Extreme droughts, severe heatwaves, and earthquakes.</p>
+                            <p>Positioned in the rain shadow of the western mountains, these dry plains lack water while sitting near major tectonic fault lines.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" id="item7">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Chin State</h3>
+                            <p>Destructive landslides and sudden flash floods. and strong earthquakes.</p>
+                            <p>Steep mountain slopes and unstable terrain rapidly collapse under the weight of heavy, concentrated monsoon downpours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" id="item8">
+                    <div class="region-background">
+                        <div class="risk-card">
+                            <h3>Kachin State</h3>
+                            <p>Massive landslides and mudslides, High-impact earthquakes</p>
+                            <p>Heavy seasonal rains combined with melting mountain snow completely overwhelm the upper Ayeyarwady river basins.</p>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Previous Arrow -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#riskCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+         <!-- Next arrow -->
+        <button class="carousel-control-next" type="button" data-bs-target="#riskCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    <section class="content">
+        <div class="text">
+            <h1>Disasters in <br> Different Areas</h1>
+        </div>
+    </section>
+
+    <section class="areas">
+        <div class="area-grid">
+            <div class="area-card">
+                <div class="area-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQEaAVi1Pic-KmrNZg0oho8_TPKyNmUQIy6cegzfwcyAniY9eVdpn3rNnp&s=10" alt="Chin">
+            </div>
+            <div class="area-info">
+                <h3>Chin State</h3>
+                <p><b>Main risks:</b>
+                Landslides, flash floods and earthquakes.</p>
+                <p>Steep mountain slopes become unstable during heavy monsoon rainfall.</p>
+            </div>
+        </div>
+         <div class="area-card">
+                <div class="area-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Ngapali_beach_and_surrounding_area%2C_Rakhine_State_07.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="rakhine">
+                </div>
+        <div class="area-info">
+                <h3>Rakhine State</h3>
+                <p><b>Main risks:</b>
+                 Cyclones, storm surges and costal flooding.</p>
+                <p>Coastal communities are sxposed to powerful winds and rising sea levels during storms.</p>
+        </div>
+        </div>
+
+         <div class="area-card">
+                <div class="area-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZf7LfEUyQHYcQ91y4t3z9Tmk0yVUpV-6pMo-UZ0qnAfRQfM4ZSp1mctM3&s=10" alt="yangon">
+                </div>
+        <div class="area-info">
+                <h3>Yangon Region</h3>
+                <p><b>Main risks:</b>
+                 Urban dlooding, cyclones and heat.</p>
+                <p>Heavy rainfall and limited drainage capacity can cause flooding in urban neighbourhoods..</p>
+        </div>
+        </div>
+        
+         <div class="area-card">
+                <div class="area-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Irrawaddy-River-Myanmar-Burma-2005.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Ayeyarwady">
+                </div>
+        <div class="area-info">
+                <h3>Ayeyarwady</h3>
+                <p><b>Main risks:</b>
+                River floods, cyclones and storm surges.</p>
+                <p>Low-lying delta communities are vulnerable to overflowing rivers and coastal hazards.</p>
+        </div>
+        </div>
+
+         <div class="area-card">
+                <div class="area-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWB-pqzcDFpE4xnm_ChKSqI-ECCbMm_Ah0b76PP1EbBkUkInmRlt-qxj5&s=10" alt="sagaing">
+                </div>
+        <div class="area-info">
+                <h3>Sagaing Region</h3>
+                <p><b>Main risks:</b>
+                 Earthquakes, floods and droughts.</p>
+                <p>The Sagaing Fault creates significant earthquake hazards in this region.</p>
+        </div>
+        </div>
+
+         <div class="area-card">
+                <div class="area-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF8GNYhouDyUVllWNLk3wHy7YWHaeLpSrbRvOg7uZ-Fe5leK8r8MoazyYj&s=10" alt="kachin">
+                </div>
+        <div class="area-info">
+                <h3>Kachin State</h3>
+                <p><b>Main risks:</b>
+                 Landslides, floods and earthquakes.</p>
+                <p>Mountaious terrain and heavy seasonal rainfall increase landslide and flooding risks.</p>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- Interesting facts -->
+    <section class="facts-section">
+        <h2 class="facts-heading">
+            Interesting Facts about
+            <span>Disasters in Myanmar</span>
+        </h2>
+
+        <div class="facts-grid">
+            <div class="fact-card" onclick="flipCard(this)">
+                <div class="fact-card-inner">
+                    <div class="fact-front">
+                        <i class="bi bi-lightbulb"></i>
+                        <h3>DID YOU KNOW?</h3>
+                        <p>Myanmar experiences different types of natural disasters.</p>
+                        <span>Click to reveal ➡ </span>
+                    </div>
+
+                    <div class="fact-back">
+                        <h3>Different Disaster Risks</h3>
+                        <p>Myanmar faces earthquakes, floods, cyclones, landslides and droughts. The risks vary depending on the geography and location of each region.</p>
+                        <span>Click to flip back ⤻ </span>
+                    </div>
+                </div>
+            </div>
+
+                <div class="fact-card" onclick="flipCard(this)">
+                    <div class="fact-card-inner">
+                        <div class="fact-front">
+                            <i class="bi bi-water"></i>
+                            <h3>DID YOU KNOW?</h3>
+                            <p>Why are coastal areas vulnerable?</p>
+                            <span>Click to reveal ➡ </span>
+                        </div>
+
+                        <div class="fact-back">
+                            <h3>Cyclone and Storm Surge Risks</h3>
+                            <p>Costal areas such as Rakhine and Ayeyarwady can experience strong winds, storm surges and costal flooding during cyclones.</p>
+                            <span>Click to flip back ➡ </span>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="fact-card" onclick="flipCard(this)">
+                    <div class="fact-card-inner">
+                        <div class="fact-front">
+                            <i class="bi bi-activity"></i>
+                            <h3>DID YOU KNOW?</h3>
+                            <p>Myanmar is located near an active fault.</p>
+                            <span>Click to reveal ➡ </span>
+                        </div>
+
+                        <div class="fact-back">
+                            <h3>The Sagaing Fault</h3>
+                            <p>The Sagaing Fault is a major active fault running through Myanmar. It creates significant earthquake hazards.</p>
+                            <span>Click to flip back ➡ </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section container-fluid dark-bg">
+        <div class="row g-4">
+            <!-- Logo, description and social links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-3">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <span class="footer-logo-wrap">
+                            <img src="image/LIFE9-Logo.png" alt="LIFE9 logo" class="footer-logo">
+                        </span>
+                        <h3 class="footer-brand-name white-text fw-bold barlow-condensed-regular m-0">LIFE9</h3>
+                    </a>
+                </div>
+                <p class="footer-description white-text barlow-condensed-regular">
+                    The baseline for a secure tomorrow.
+                </p>
+                <div class="footer-social-links d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="footer-media-link">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://web.telegram.org/" aria-label="Telegram" class="footer-media-link">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="https://x.com/" aria-label="X" class="footer-media-link">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Quick Links</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="index.html" class="footer-link white-text">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link white-text">About Us</a></li>
+                        <li><a href="news.html" class="footer-link white-text">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Explore -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Explore</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="types.html" class="footer-link white-text">Types of Disasters</a></li>
+                        <li><a href="high_risk.html" class="footer-link white-text">High-risk Areas</a></li>
+                        <li><a href="faq.html" class="footer-link white-text">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Contact Us</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li>
+                            <a href="tel:+959776964436" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97769 64436
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:life9@gmail.com" class="footer-link white-text">
+                                <i class="bi bi-envelope-fill pe-1"></i> life9@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/PkofouHPTJ3KPXVG9" class="footer-link white-text">
+                                <i class="bi bi-geo-alt-fill pe-1"></i> Thukha Chanthar Condo, Thumana 3rd street, Yangon, Myanmar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer divider -->
+        <hr class="footer-line my-4">
+
+        <!-- Copyright and policies -->
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        LIFE9 © 2026 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end footer-ref-policy-text">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        <a href="policy.html" class="white-text footer-link">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSbL_c72sZwKxrASTaIBeT9byPQWptYKzQbmNh1aTp_PRlJlacBZF-W8RmGcepH4gSk0lrW5FfQBq44/pub" class="white-text footer-link">References</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+      <script src="external/high_risk.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

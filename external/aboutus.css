@@ -1,0 +1,184 @@
+/*About Us Page*/
+
+/*Hero Video height*/
+.hero-section{
+    height: 600px;
+}
+
+/*Mission & Vision*/
+.mission-vision-card{
+    background-color: white;
+    color: black;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border: 2px solid lightgray;
+}
+.mission-vision-card:hover {
+    background-color: #e1efff;
+    color: black;
+    transform: translateY(-10px) !important;
+}
+
+/*Purpose*/
+.purpose-image {
+    transition: 0.4s ease-in-out;
+}
+.purpose-image:hover{
+    transform: translateY(-10px) !important;
+}
+
+/*Our Objectives & Ambition Section*/
+.custom-obj-card{
+    transition: 0.4s ease-in-out;
+    border: 2px solid lightgray;
+    cursor: pointer;
+}
+.custom-obj-card:hover{
+    transition: 0.4s ease-in-out;
+    transform: translateY(-7px);
+}
+
+/*Creators Carousel*/
+.creators-section{
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+.creator-card{
+    width: 100%;
+    max-width: 425px;
+    min-height: 300px;
+    background-color: #880020;
+    border: 2px solid lightgray;
+    border-radius: 17px;
+    transition: transform 0.3s ease;
+}
+.creator-card:hover{
+    transform: translateY(-5px);
+}
+.creator-img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: top center;
+}
+#creatorCarousel .carousel-inner{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#creatorCarousel .carousel-control-prev, #creatorCarousel .carousel-control-next{
+    width: 40px;
+}
+#creatorCarousel .carousel-control-prev{
+    left: -45px;
+}
+#creatorCarousel .carousel-control-next{
+    right: -45px;
+}
+
+/*Responsive*/
+@media (max-width: 576px){
+    #creatorCarousel .carousel-control-prev{
+        left: 0;
+    }
+    #creatorCarousel .carousel-control-next{
+        right: 0;
+    }
+}
+
+/* Footer */
+.footer-section {
+    padding: 50px;
+}
+.white-text {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer link cards */
+.footer-link-card {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.18);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.footer-link-card:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.25);
+}
+
+/* Footer headings & links */
+.footer-link-card p {
+    margin-bottom: 12px;
+}
+.footer-link-list > li {
+    margin-bottom: 8px;
+}
+.footer-link {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.footer-link:hover {
+    transform: translateX(5px);
+    color: rgba(255, 255, 255, 0.75);
+}
+.footer-link:focus-visible,
+.footer-media-link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* Footer logo */
+.footer-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 12px;
+    transition: transform 0.25s ease;
+}
+.footer-logo:hover {
+    transform: scale(1.06);
+}
+
+/* Social media icons */
+.footer-media-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-media-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+    transform: translateY(-3px);
+}
+
+/* Divider */
+.footer-line {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Bottom footer section */
+.footer-ref-policy-text .footer-link:hover {
+    transform: none;
+    text-decoration: underline;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .footer-link,
+    .footer-link-card,
+    .footer-logo,
+    .footer-media-link {
+        transition: none;
+    }
+    .footer-link:hover,
+    .footer-logo:hover,
+    .footer-media-link:hover {
+        transform: none;
+    }
+}

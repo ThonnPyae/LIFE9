@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response & Recovery</title>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <link rel="stylesheet" href="external/recovery.css">
+    <!-- Web Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Brand/Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="image/LIFE9-Logo.png" class="img-fluid logo-img" alt="LIFE9 Logo">
+            </a>
+            <a class="navbar-brand m-title-text fw-bold" href="index.html">LIFE9</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white-50" aria-current="page" href="index.html"><i class="bi bi-house-door nav-icon"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="aboutus.html">About us</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white-50 hover-white" href="#" id="disasterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="disasterDropdown">
+                            <li><a class="dropdown-item" href="types.html">Disaster Types</a></li>
+                            <li><a class="dropdown-item" href="high_risk.html">High-risk Areas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="news.html">Recent News</a></li>
+                            <li><a class="dropdown-item" href="recovery.html">Response & Recovery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+
+                <!-- Login/signup -->
+                <div class="d-flex align-items-center gap-2 justify-content-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign in</a>
+                    <a href="signup.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="container hero-content">
+            <p class="eyebrow">LIFE9 • DISASTER RISK REDUCTION</p>
+            <h1>Response & Recovery</h1>
+            <p>Know what to do during a disaster, protect yourself and others, and take the right steps toward recovery.</p>
+            <a href="#response" class="main-btn">Respond Safely <i class="bi bi-arrow-down"></i></a>
+            <a href="#recovery" class="main-btn outline-btn">Explore Recovery</a>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="section" id="response">
+            <div class="container" data-aos="fade-up" data-aos-duration="1500">
+                <div class="section-heading">
+                    <p class="eyebrow">WHEN DISASTER STRIKES</p>
+                    <h2>What Should You Do?</h2>
+                    <p>During an emergency, staying calm and following reliable safety instructions can help reduce injuries and protect lives.</p>
+                </div>
+                <div class="intro-box" data-aos="fade-right" data-aos-duration="1500">
+                    <h3><i class="bi bi-exclamation-triangle-fill me-2"></i>Remember: Safety Comes First</h3>
+                    <p>Every disaster is different. Follow instructions from local authorities and emergency responders. Do not put yourself in danger to save belongings or return to an unsafe area.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="step-card">
+                            <div class="step-icon"><i class="bi bi-shield-check"></i></div>
+                            <h3>1. Protect Yourself</h3>
+                            <ul>
+                                <li>Follow the correct safety actions for the hazard.</li>
+                                <li>Move away from immediate danger if it is safe to do so.</li>
+                                <li>Stay away from damaged buildings, fallen power lines and unstable structures.</li>
+                                <li>Keep children and vulnerable people close and supported.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="step-card">
+                            <div class="step-icon"><i class="bi bi-broadcast"></i></div>
+                            <h3>2. Get Reliable Information</h3>
+                            <ul>
+                                <li>Listen to official warnings and emergency instructions.</li>
+                                <li>Use a charged phone or battery-powered radio when available.</li>
+                                <li>Check information before sharing it with others.</li>
+                                <li>Do not spread unverified reports or rumours.</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="step-card">
+                            <div class="step-icon"><i class="bi bi-people"></i></div>
+                            <h3>3. Help Others Safely</h3>
+                            <ul>
+                                <li>Contact emergency responders when someone needs urgent help.</li>
+                                <li>Assist children, older adults and people with disabilities when safe.</li>
+                                <li>Share essential supplies without entering dangerous areas.</li>
+                                <li>Do not attempt rescues beyond your training or abilities.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="warning-box">
+                    <h3><i class="bi bi-exclamation-circle-fill me-2"></i>Important Safety Reminder</h3>
+                    <p>Never walk or drive through floodwater, touch fallen electrical wires, or enter a damaged building before it has been declared safe. If evacuation is advised, follow the designated route and instructions from local authorities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section recovery-section" id="recovery">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">AFTER THE DANGER</p>
+                    <h2>Steps Toward Recovery</h2>
+                    <p>Recovery takes time. Communities can rebuild safely by addressing urgent needs first and planning for future risks.</p>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-item" data-aos="fade-up-right" data-aos-duration="1200">
+                        <div class="timeline-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <div class="timeline-content">
+                            <h3>1. Check Health and Safety</h3>
+                            <p>Make sure everyone is accounted for and seek medical assistance for injuries or illness. Avoid damaged structures, contaminated water and unsafe food. Follow public health advice.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item" data-aos="fade-up-left" data-aos-duration="1200">
+                        <div class="timeline-icon"><i class="bi bi-house-check"></i></div>
+                        <div class="timeline-content">
+                            <h3>2. Find Safe Shelter and Essentials</h3>
+                            <p>Use a safe shelter if your home is damaged or unsafe. Arrange access to clean drinking water, food, essential medicine, sanitation and necessary supplies.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item" data-aos="fade-up-right" data-aos-duration="1200">
+                        <div class="timeline-icon"><i class="bi bi-clipboard2-check"></i></div>
+                        <div class="timeline-content">
+                            <h3>3. Assess Damage Carefully</h3>
+                            <p>Document property damage when it is safe, and report hazards to the relevant authorities. Do not re-enter damaged buildings until they have been checked and declared safe.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item" data-aos="fade-up-left" data-aos-duration="1200">
+                        <div class="timeline-icon"><i class="bi bi-people-fill"></i></div>
+                        <div class="timeline-content">
+                            <h3>4. Support Community Recovery</h3>
+                            <p>Work with trusted local organisations and community leaders to distribute supplies fairly, restore essential services and support people who need additional assistance.</p>
+                        </div>
+                    </article>
+                    <article class="timeline-item" data-aos="fade-up-right" data-aos-duration="1200">
+                        <div class="timeline-icon"><i class="bi bi-arrow-repeat"></i></div>
+                        <div class="timeline-content">
+                            <h3>5. Rebuild More Safely</h3>
+                            <p>When rebuilding, consider local hazards, safer building practices, improved drainage, accessible evacuation routes and better emergency communication to reduce future risks.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section checklist-section" id="checklist">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">BE READY TO ACT</p>
+                    <h2>Emergency Recovery Checklist</h2>
+                    <p>Use this interactive checklist to review important steps after a disaster. Tick each item as you complete it.</p>
+                </div>
+                <div class="checklist-box">
+                    <h3><i class="bi bi-clipboard-check me-2"></i>My Safety Checklist</h3>
+                    <p>Only complete these actions when it is safe to do so.</p>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Confirm that family members and household members are safe.</span></label>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Contact emergency services or seek medical help if needed.</span></label>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Find safe shelter and access to clean drinking water.</span></label>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Follow official instructions about evacuation and returning home.</span></label>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Avoid damaged buildings, floodwater and electrical hazards.</span></label>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Check on neighbours who may need extra assistance, if safe.</span></label>
+                    <label class="check-item"><input type="checkbox" class="recovery-check"> <span>Keep important documents and records safe when possible.</span></label>
+                    <div class="check-progress">
+                        <span id="progress-text">0 of 7 completed</span>
+                        <div class="progress" role="progressbar" aria-label="Checklist progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" id="progress-container">
+                            <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section community-section" data-aos="fade-up" data-aos-duration="1300">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">STRONGER TOGETHER</p>
+                    <h2>Recovery Is a Community Effort</h2>
+                    <p>Everyone can contribute to a safer, more resilient community in ways that match their abilities.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="community-card">
+                            <i class="bi bi-person-hearts"></i>
+                            <h3>Support Vulnerable People</h3>
+                            <p>Help older adults, children, people with disabilities and others who may face barriers to receiving assistance.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="community-card">
+                            <i class="bi bi-megaphone"></i>
+                            <h3>Share Trusted Information</h3>
+                            <p>Pass on verified updates, safety instructions and information about available support services.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="community-card">
+                            <i class="bi bi-tree"></i>
+                            <h3>Reduce Future Risks</h3>
+                            <p>Keep drainage pathways clear when safe, manage waste responsibly and participate in local preparedness activities.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" data-aos="flip-up">
+            <div class="container">
+                <div class="help-banner">
+                    <h2>Prepared Today, Safer Tomorrow</h2>
+                    <p>Learn about different hazards and prepare before the next emergency happens.</p>
+                    <a href="types.html">Explore Types of Disasters <i class="bi bi-arrow-right"></i></a>
+                    <span class="mx-2">|</span>
+                    <a href="faq.html">Visit Our FAQ <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Myanmar emergency contacts -->
+    <section class="section emergency-contacts" id="emergency-contacts">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">HELP WHEN YOU NEED IT</p>
+                <h2>Myanmar Emergency Contacts</h2>
+                <p>Find emergency services and trusted organizations that may help you during a disaster or other emergency.</p>
+            </div>
+            <div class="contact-notice">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                <div>
+                    <h3>Need Immediate Help?</h3>
+                    <p>Move to a safe place if possible and contact the appropriate emergency service. If a number does not connect, seek assistance from a nearby hospital, fire station or trusted local organization.</p>
+                </div>
+            </div>
+            <div class="row g-4 contact-grid">
+                <div class="col-md-6 col-lg-4">
+                    <article class="contact-card urgent-card">
+                        <div class="contact-icon"><i class="bi bi-hospital"></i></div>
+                        <span class="contact-category">MEDICAL EMERGENCY</span>
+                        <h3>Ambulance Service</h3>
+                        <p>For urgent medical emergencies and ambulance assistance.</p>
+                        <a href="tel:192" class="contact-number"><i class="bi bi-telephone-fill"></i> 192</a>
+                        <span class="contact-note">Availability may vary by area.</span>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="contact-card urgent-card">
+                        <div class="contact-icon"><i class="bi bi-fire"></i></div>
+                        <span class="contact-category">FIRE & RESCUE</span>
+                        <h3>Fire Service</h3>
+                        <p>Contact the fire service for fire emergencies and related assistance.</p>
+                        <a href="tel:191" class="contact-number"><i class="bi bi-telephone-fill"></i> 191</a>
+                        <span class="contact-note">Availability may vary by area.</span>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="contact-card urgent-card">
+                        <div class="contact-icon"><i class="bi bi-shield-exclamation"></i></div>
+                        <span class="contact-category">POLICE ASSISTANCE</span>
+                        <h3>Police Emergency</h3>
+                        <p>For urgent situations requiring police assistance.</p>
+                        <a href="tel:199" class="contact-number"><i class="bi bi-telephone-fill"></i> 199</a>
+                        <span class="contact-note">Availability may vary by area.</span>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <span class="contact-category">HUMANITARIAN SUPPORT</span>
+                        <h3>Myanmar Red Cross Society</h3>
+                        <p>Provides humanitarian assistance, disaster response and emergency coordination.</p>
+                        <a href="tel:+959940078898" class="contact-number">+95 9 940 078 898</a>
+                        <span class="contact-note">Emergency Operations Center hotline, available 24/7 during emergency activation.</span>
+                        <a href="https://www.redcross.org.mm/our-work/emergency-operations-center/" target="_blank" rel="noopener noreferrer" class="contact-link">Official contact information <i class="bi bi-arrow-up-right"></i></a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="bi bi-people"></i></div>
+                        <span class="contact-category">FAMILY RECONNECTION</span>
+                        <h3>Myanmar Red Cross Family Links</h3>
+                        <p>Helps people enquire about relatives and reconnect with family members separated during emergencies.</p>
+                        <a href="tel:+95957557000" class="contact-number">+95 9 575 570 00</a>
+                        <span class="contact-note">Office hours: Monday–Friday, 9:30 AM–4:30 PM.</span>
+                        <a href="https://www.redcross.org.mm/our-work/restoring-family-link-and-people-movement/" target="_blank" rel="noopener noreferrer" class="contact-link">Official contact information <i class="bi bi-arrow-up-right"></i></a>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="contact-card">
+                        <div class="contact-icon"><i class="bi bi-globe-asia-australia"></i></div>
+                        <span class="contact-category">HUMANITARIAN SUPPORT</span>
+                        <h3>International Committee of the Red Cross</h3>
+                        <p>Provides humanitarian support in Myanmar, including assistance for families separated by emergencies.</p>
+                        <a href="tel:+959776662555" class="contact-number">+95 9 776 662 555</a>
+                        <span class="contact-note">Published office hours: Monday–Friday, 8:00 AM–4:30 PM.</span>
+                        <a href="https://www.icrc.org/en/article/FAQ-icrc-work-myanmar" target="_blank" rel="noopener noreferrer" class="contact-link">Official contact information <i class="bi bi-arrow-up-right"></i></a>
+                    </article>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <i class="bi bi-info-circle-fill"></i>
+                <p><strong>Important:</strong> Contact details and service availability can change. Verify information through the linked official websites, and keep your local hospital and township emergency contacts saved offline. These contacts are not a substitute for medical advice or a dedicated health hotline.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-section container-fluid dark-bg">
+        <div class="row g-4">
+            <!-- Logo, description and social links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-3">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <span class="footer-logo-wrap">
+                            <img src="image/LIFE9-Logo.png" alt="LIFE9 logo" class="footer-logo">
+                        </span>
+                        <h3 class="footer-brand-name white-text fw-bold barlow-condensed-regular m-0">LIFE9</h3>
+                    </a>
+                </div>
+                <p class="footer-description white-text barlow-condensed-regular">
+                    The baseline for a secure tomorrow.
+                </p>
+                <div class="footer-social-links d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="footer-media-link">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://web.telegram.org/" aria-label="Telegram" class="footer-media-link">
+                        <i class="bi bi-telegram"></i>
+                    </a>
+                    <a href="https://x.com/" aria-label="X" class="footer-media-link">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Quick Links</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="index.html" class="footer-link white-text">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link white-text">About Us</a></li>
+                        <li><a href="news.html" class="footer-link white-text">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Explore -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Explore</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="types.html" class="footer-link white-text">Types of Disasters</a></li>
+                        <li><a href="high_risk.html" class="footer-link white-text">High-risk Areas</a></li>
+                        <li><a href="faq.html" class="footer-link white-text">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Contact Us</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li>
+                            <a href="tel:+959776964436" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97769 64436
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:life9@gmail.com" class="footer-link white-text">
+                                <i class="bi bi-envelope-fill pe-1"></i> life9@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/PkofouHPTJ3KPXVG9" class="footer-link white-text">
+                                <i class="bi bi-geo-alt-fill pe-1"></i> Thukha Chanthar Condo, Thumana 3rd street, Yangon, Myanmar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer divider -->
+        <hr class="footer-line my-4">
+
+        <!-- Copyright and policies -->
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        LIFE9 © 2026 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end footer-ref-policy-text">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        <a href="policy.html" class="white-text footer-link">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSbL_c72sZwKxrASTaIBeT9byPQWptYKzQbmNh1aTp_PRlJlacBZF-W8RmGcepH4gSk0lrW5FfQBq44/pub" class="white-text footer-link">References</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- External JS -->
+    <script src="external/recovery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
