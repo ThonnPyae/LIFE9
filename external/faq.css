@@ -1,0 +1,329 @@
+/* FAQ layout */
+.faq-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 145px 30px 70px;
+}
+.faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 45px;
+    align-items: start;
+}
+.faq-column {
+    min-width: 0;
+}
+.faq-title {
+    color: #134989;
+    font-size: clamp(35px, 3.5vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 8px;
+}
+.faq-subtitle {
+    color: #bc1400;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 28px;
+}
+
+/* Accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.accordion-item {
+    border: 1.5px solid #134989;
+    border-radius: 16px !important;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 3px 12px rgba(19,73,137,0.05);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.accordion-item:hover {
+    box-shadow: 0 5px 16px rgba(19,73,137,0.1);
+}
+.accordion-button {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 19px 24px;
+    color: #1e1e1b;
+    background: white;
+    box-shadow: none !important;
+    gap: 12px;
+}
+.accordion-button::after {
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+.accordion-button:not(.collapsed) {
+    color: #134989;
+    background: #f1f9ff;
+}
+.accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+.accordion-collapse {
+    background: #f1f9ff;
+}
+.accordion-body {
+    font-size: 19px;
+    line-height: 1.7;
+    padding: 8px 24px 22px;
+    color: #444;
+}
+.accordion-body p {
+    margin: 0;
+}
+
+/* Map and survey */
+.map-container {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 0;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #f1f9ff;
+    box-shadow: 0 8px 25px rgba(19,73,137,0.12);
+}
+.map-container img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.map-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 35%, rgba(255,255,255,0.96) 75%);
+    pointer-events: none;
+}
+.map-text {
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    bottom: 28px;
+    left: 7%;
+    width: 86%;
+    font-size: 23px;
+    line-height: 1.5;
+}
+.map-text p {
+    margin-bottom: 18px;
+    color: #1e1e1b;
+}
+.survey-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid #134989;
+    border-radius: 30px;
+    padding: 10px 26px;
+    color: #134989;
+    background: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.survey-btn:hover {
+    background-color: #134989;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer-section {
+    padding: 50px;
+}
+.white-text {
+    color: white;
+    text-decoration: none;
+}
+.footer-link-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.12);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.footer-link-card:hover {
+    box-shadow: 0 0 25px rgba(255,0,0,0.22);
+    border-color: rgba(255,0,0,0.25);
+}
+.footer-link-card p {
+    margin-bottom: 12px;
+}
+.footer-link-list > li {
+    margin-bottom: 8px;
+}
+.footer-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.footer-link:hover {
+    transform: translateX(4px);
+    color: rgba(255,255,255,0.75);
+}
+.footer-link:focus-visible,
+.footer-media-link:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+.footer-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 12px;
+    transition: transform 0.25s ease;
+}
+.footer-logo:hover {
+    transform: scale(1.06);
+}
+.footer-media-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-media-link:hover {
+    color: rgba(255,255,255,0.75);
+    transform: translateY(-3px);
+}
+.footer-line {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.footer-ref-policy-text .footer-link:hover {
+    transform: none;
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    
+    .faq-container {
+        padding: 130px 24px 55px;
+    }
+    .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .map-container,
+    .map-container img {
+        min-height: 430px;
+    }
+    .map-text {
+        bottom: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #navbar {
+        min-height: 80px;
+    }
+    .navbar-brand:first-child {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+    .m-title-text {
+        font-size: 35px;
+    }
+    #navbar .btn {
+        font-size: 17px;
+    }
+    .faq-container {
+        padding: 110px 18px 40px;
+    }
+    .faq-layout {
+        gap: 28px;
+    }
+    .faq-title {
+        font-size: 35px;
+    }
+    .faq-subtitle {
+        font-size: 25px;
+        margin-bottom: 22px;
+    }
+    .accordion {
+        gap: 12px;
+    }
+    .accordion-item {
+        border-radius: 13px !important;
+    }
+    .accordion-button {
+        font-size: 18px;
+        padding: 16px 17px;
+    }
+    .accordion-body {
+        font-size: 17px;
+        padding: 5px 17px 18px;
+    }
+    .map-container,
+    .map-container img {
+        min-height: 390px;
+    }
+    .map-container {
+        border-radius: 16px;
+    }
+    .map-text {
+        left: 6%;
+        width: 88%;
+        bottom: 20px;
+        font-size: 20px;
+    }
+    .survey-btn {
+        font-size: 18px;
+        padding: 9px 22px;
+    }
+    .footer-section {
+        padding: 35px 20px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+    .faq-title {
+        font-size: 31px;
+    }
+    .accordion-button {
+        font-size: 17px;
+        padding: 14px;
+    }
+    .map-container,
+    .map-container img {
+        min-height: 350px;
+    }
+    .map-text {
+        font-size: 18px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

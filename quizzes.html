@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes | LIFE9</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Shared CSS first, page-specific CSS second -->
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <link rel="stylesheet" href="external/quizzes.css">
+    <link rel="stylesheet" href="external/sidebar.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <div class="page-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn" type="button" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+                <i class="bi bi-arrow-left" id="toggleIcon"></i>
+            </button>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/LIFE9-Logo.png" alt="LIFE9 Logo">
+                </a>
+                <a href="index.html">
+                    <h2>LIFE9</h2>
+                </a>
+            </div>
+
+            <nav class="menu">
+                <a href="dashboard.html" class="menu-item" data-tooltip="Dashboard">
+                    <i class="bi bi-clipboard2-check"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="quizzes.html" class="menu-item active" data-tooltip="Quizzes" aria-current="page">
+                    <i class="bi bi-controller"></i>
+                    <span>Quizzes</span>
+                </a>
+
+                <a href="hazard_map.html" class="menu-item" data-tooltip="Hazard Maps">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Hazard Maps</span>
+                </a>
+
+                <a href="report_hub.html" class="menu-item" data-tooltip="Report Hub">
+                    <i class="bi bi-exclamation-square"></i>
+                    <span>Report Hub</span>
+                </a>
+
+                <a href="account.html" class="menu-item" data-tooltip="Account">
+                    <i class="bi bi-person"></i>
+                    <span>Account</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Quiz Header -->
+            <header class="quiz-header" id="quizHeader">
+                <h1>
+                    SEE IF YOU CAN <span class="red">SURVIVE THEM.</span>
+                </h1>
+            </header>
+
+            <!-- Start Screen -->
+            <section id="startSection" class="start-section">
+                <div class="intro-box">
+                    Are you ready to face a deadly disaster?
+                    <br><br>
+                    Are you still unprepared?
+                </div>
+
+                <div class="bubble">
+                    <span>?</span>
+                </div>
+
+                <button id="startBtn" class="start-btn" type="button">
+                    Start quiz!
+                </button>
+            </section>
+
+            <!-- Quiz Questions -->
+            <section id="quizSection" class="quiz-section">
+                <div class="quiz-container">
+
+                    <!-- Progress -->
+                    <div class="progress-container">
+                        <div class="quiz-progress-track">
+                            <div class="progress-fill" id="progressFill"></div>
+                            <div class="progress-circle" id="progressCircle">20%</div>
+                        </div>
+                    </div>
+
+                    <!-- Question Number -->
+                    <div class="question-info">
+                        <span></span>
+                        <p id="questionNumber">QUESTION 1 OF 5</p>
+                        <span></span>
+                    </div>
+
+                    <!-- Scenario -->
+                    <div class="scenario-box" id="scenarioBox"></div>
+
+                    <!-- Question -->
+                    <h2 id="questionTitle"></h2>
+
+                    <!-- Answer Options -->
+                    <div class="answers" id="answers"></div>
+
+                    <!-- Navigation -->
+                    <div class="navigation">
+                        <button class="back-btn" id="backBtn" type="button" onclick="previousQuestion()">
+                            &#x2190; &nbsp; Back
+                        </button>
+
+                        <button class="next-btn" id="nextBtn" type="button" onclick="nextQuestion()">
+                            Next
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Completion Screen -->
+            <section id="completeSection" class="complete-section">
+                <div class="complete-card">
+                    <div class="complete-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+
+                    <h2>Quiz Completed!</h2>
+
+                    <p>
+                        Thank you for completing the LIFE9
+                        Disaster Preparedness Quiz!
+                    </p>
+
+                    <button onclick="restartQuiz()" class="restart-btn" type="button">
+                        Try Again
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="external/sidebar.js"></script>
+    <script src="external/auth.js"></script>
+    <script src="external/quizzes.js"></script>
+</body>
+</html>

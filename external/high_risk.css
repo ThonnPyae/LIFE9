@@ -1,0 +1,820 @@
+/* High-risk areas page */
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* Keep navbar above the hazard map */
+.navbar {
+    position: relative;
+    z-index: 2000 !important;
+}
+
+/* Keep Leaflet map below the navbar */
+.leaflet-container {
+    z-index: 1;
+}
+
+.leaflet-control-container {
+    z-index: 800;
+}
+
+/* Page Header */
+
+.forest-header {
+    position: relative;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 28, 25, 0.82),
+            rgba(10, 28, 25, 0.42)
+        ),
+        url("../image/forest.png") center 48% / cover no-repeat;
+    color: white;
+    overflow: hidden;
+}
+
+.forest-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(10, 28, 25, 0.35),
+        transparent 55%
+    );
+    pointer-events: none;
+}
+
+.forest-header .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.forest-header .hero-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 30px;
+    color: #e3eddf;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.forest-header h1 {
+    max-width: 850px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
+}
+
+.forest-header p {
+    max-width: 620px;
+    margin-top: 22px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .forest-header {
+        min-height: 360px;
+        padding: 75px 7%;
+        
+        background-position: center;
+    }
+
+    .forest-header p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .forest-header {
+        padding-top: 75px 90px;
+    }
+}
+
+.header-content {
+    max-width: 680px;
+}
+
+.risk-label,
+.section-label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.risk-label {
+    background-color: #174d83;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 30px;
+}
+
+.header-content h1 {
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 700;
+    margin: 18px 0 12px;
+    line-height: 1.1;
+}
+
+.header-content p {
+    font-size: 19px;
+    line-height: 1.55;
+    margin-bottom: 0;
+    max-width: 620px;
+}
+
+/* Interactive Map Section */
+.risk-section {
+    padding: 70px 7%;
+    background-color: #ffffff;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.section-heading .section-label {
+    color: #d45b50;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    color: #174d83;
+    font-size: clamp(29px, 4vw, 38px);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #666;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.interactive-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 30px;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Map Container */
+.map-container {
+    min-width: 0;
+    padding: 18px;
+    background-color: #f3f8fa;
+    border: 1px solid #e1e9ee;
+    border-radius: 16px;
+}
+
+.map-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #174d83;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+}
+
+.map-hint {
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+#map{
+    width: 100%;
+    height: 560px;
+    border-radius: 15px;
+    background-color: #f3f8fa;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* Leaflet Region Styling */
+#map .leaflet-interactive {
+    cursor: pointer;
+    transition: fill-opacity 0.2s ease;
+}
+
+#map .leaflet-control-zoom {
+    z-index: -3;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+#map .leaflet-control-zoom a {
+    color: #174d83;
+}
+
+.region-tooltip {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Map Instruction */
+.map-instruction {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin: 14px 0 0;
+}
+
+.map-instruction i {
+    color: #174d83;
+    margin-right: 5px;
+}
+
+.map-credit {
+    max-width: 1200px;
+    margin: 12px auto 0;
+    color: #888;
+    font-size: 14px;
+    text-align: right;
+}
+
+/* Region Information Card */
+.region-card {
+    background-color: #f3f6f4;
+    border: 1px solid #e5ece8;
+    padding: 35px;
+    border-radius: 16px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.region-number {
+    color: #d45b50;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    margin-bottom: 15px;
+}
+
+.region-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dceaf2;
+    color: #174d83;
+    border-radius: 12px;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.region-card h3 {
+    color: #183c36;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.region-card h5 {
+    color: #174d83;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.region-card p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+
+.region-card .region-risk {
+    color: #c25148;
+    font-weight: 600;
+}
+
+.region-card-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    background-color: #e7eff2;
+    color: #526b78;
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.region-card-note i {
+    color: #174d83;
+    margin-top: 2px;
+}
+
+/* Regional Overview Banner */
+.content {
+    min-height: 350px;
+    background-image:
+        linear-gradient(rgba(0, 20, 35, 0.25), rgba(0, 20, 35, 0.45)),
+        url("https://i.pinimg.com/1200x/9c/2c/a8/9c2ca88dad9f63399b9c5cbfb8c4b31d.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 45px 7%;
+}
+
+.text {
+    max-width: 750px;
+}
+
+.text .section-label {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.text h2 {
+    color: white;
+    font-size: clamp(48px, 8vw, 82px);
+    font-weight: 700;
+    line-height: 0.95;
+    margin-bottom: 18px;
+}
+
+.text p {
+    color: white;
+    font-size: 19px;
+    max-width: 500px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Regional Cards */
+.areas {
+    background-color: #eff9ff;
+    padding: 55px 7%;
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 20px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.area-card {
+    background-color: white;
+    border: 1px solid #e4edf2;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 24px rgba(23, 77, 131, 0.12);
+}
+
+.area-image {
+    height: 175px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #dce8ed;
+}
+
+.area-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.area-card:hover .area-image img {
+    transform: scale(1.05);
+}
+
+.area-info {
+    padding: 20px;
+}
+
+.area-tag {
+    display: inline-block;
+    color: #d45b50;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.area-info h3 {
+    color: #174d83;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.area-info p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.area-info strong {
+    color: #333;
+}
+
+/* Interesting Facts */
+.facts-section {
+    padding: 90px 8%;
+    background: #f8faf8;
+}
+
+.facts-section .section-heading {
+    margin-bottom: 35px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 42px auto 0;
+}
+
+.fact-card {
+    height: 340px;
+    perspective: 1000px;
+    cursor: pointer;
+    outline: none;
+}
+
+.fact-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+}
+
+.fact-card:hover .fact-card-inner,
+.fact-card:focus-visible .fact-card-inner {
+    transform: translateY(-6px);
+}
+
+.fact-card.flipped .fact-card-inner {
+    transform: rotateY(180deg);
+}
+
+.fact-card.flipped:hover .fact-card-inner,
+.fact-card.flipped:focus-visible .fact-card-inner {
+    transform: rotateY(180deg) translateY(-6px);
+}
+
+.fact-front,
+.fact-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 27px 24px;
+    border-radius: 18px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.fact-front {
+    background: white;
+    border: 1px solid #e5ebe7;
+}
+
+.fact-back {
+    justify-content: center;
+    background: #edf4f0;
+    border: 1px solid #d8e5dc;
+    transform: rotateY(180deg);
+}
+
+.fact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+.fact-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.flood-icon {
+    color: #286b83;
+    background: #e8f3f6;
+}
+
+.landslide-icon {
+    color: #827044;
+    background: #f2efe4;
+}
+
+.cyclone-icon {
+    color: #a45c42;
+    background: #f8eee8;
+}
+
+.heat-icon {
+    color: #536b9b;
+    background: #edf0f7;
+}
+
+.fact-number {
+    margin-bottom: 10px;
+    color: #819087;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.fact-card h3 {
+    margin-bottom: 12px;
+    color: #203c31;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.fact-card p {
+    margin: 0 0 20px;
+    color: #69776f;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.fact-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #edf0ed;
+    color: #738078;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.fact-bottom i {
+    color: #547967;
+    font-size: 17px;
+}
+
+.fact-card:focus-visible {
+    outline: 3px solid #174d83;
+    outline-offset: 5px;
+    border-radius: 18px;
+}
+
+@media (max-width: 1100px) {
+    .facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .facts-section {
+        padding: 65px 6%;
+    }
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .fact-card {
+        height: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fact-card-inner {
+        transition: none;
+    }
+}
+
+.risk-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.risk-tag {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #edf3f0;
+    color: #244b3b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#regionInfo h3 {
+    margin: 12px 0;
+    color: #173d32;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#regionInfo h4 {
+    margin-top: 22px;
+    color: #244b3b;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+    .interactive-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .region-card {
+        min-height: 300px;
+    }
+
+    .area-grid,
+    .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content {
+        min-height: 300px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .forest-header {
+        min-height: 360px;
+        height: auto;
+        padding: 110px 6% 45px;
+        background-position: center;
+    }
+
+    .header-content h1 {
+        font-size: 34px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .risk-section {
+        padding: 45px 6%;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading p {
+        font-size: 17px;
+    }
+
+    .interactive-layout {
+        gap: 20px;
+    }
+
+    .map-container {
+        padding: 10px;
+    }
+
+    .map-topline {
+        font-size: 12px;
+    }
+
+    #map {
+        height: 360px;
+    }
+
+    .map-instruction {
+        font-size: 14px;
+    }
+
+    .map-credit {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .region-card {
+        padding: 25px;
+        min-height: 280px;
+    }
+
+    .region-card h3 {
+        font-size: 28px;
+    }
+
+    .region-card p {
+        font-size: 17px;
+    }
+
+    .content {
+        min-height: 270px;
+        padding: 35px 6%;
+    }
+
+    .text h2 {
+        font-size: 48px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .areas,
+    .facts-section {
+        padding: 40px 6%;
+    }
+
+    .area-grid,
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .area-image {
+        height: 190px;
+    }
+
+    .fact-card {
+        height: 240px;
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .area-card,
+    .area-image img,
+    .fact-card,
+    .fact-card-inner,
+    .region-card {
+        transition: none;
+    }
+}

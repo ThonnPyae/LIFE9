@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | LIFE9</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <link rel="stylesheet" href="external/dashboard.css">
+    <link rel="stylesheet" href="external/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+    <div class="page-layout dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <i class="bi bi-arrow-left" id="toggleIcon"></i>
+            </button>
+            <div class="logo">
+                <a href="index.html"><img src="image/LIFE9-Logo.png" alt="LIFE9 Logo"></a>
+                <a href="index.html"><h2>LIFE9</h2></a>
+            </div>
+            <nav class="menu">
+                <a href="dashboard.html" class="menu-item active" data-tooltip="Dashboard">
+                    <i class="bi bi-clipboard2-check"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="quizzes.html" class="menu-item" data-tooltip="Quizzes">
+                    <i class="bi bi-controller"></i>
+                    <span>Quizzes</span>
+                </a>
+                <a href="hazard_map.html" class="menu-item" data-tooltip="Hazard Maps">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Hazard Maps</span>
+                </a>
+                <a href="report_hub.html" class="menu-item" data-tooltip="Report Hub">
+                    <i class="bi bi-exclamation-square"></i>
+                    <span>Report Hub</span>
+                </a>
+                <a href="account.html" class="menu-item" data-tooltip="Account">
+                    <i class="bi bi-person"></i>
+                    <span>Account</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Dashboard -->
+        <main class="page-content dashboard-main">
+            <div class="container-fluid dashboard-container">
+
+                <!-- Page Heading -->
+                <div class="dashboard-heading" data-aos="fade-down">
+                    <div>
+                        <p class="dashboard-eyebrow">LIFE9 / PERSONAL DASHBOARD</p>
+                        <h1 class="welcome-text">Welcome, <span id="user-display-name">User</span></h1>
+                        <p class="heading-description">Your space to stay informed, prepared, and ready to respond.</p>
+                    </div>
+                    <div class="dashboard-date">
+                        <i class="bi bi-calendar3"></i>
+                        <span id="today-date">Your preparedness starts today</span>
+                    </div>
+                </div>
+
+                <!-- Main Banner -->
+                <section class="preparedness-banner" data-aos="fade-up">
+                    <div class="banner-content">
+                        <span class="banner-label"><i class="bi bi-shield-check"></i> BE INFORMED. BE PREPARED.</span>
+                        <h2>Preparedness starts<br>before a disaster.</h2>
+                        <p>Understand the risks around you, make a plan, and take small steps to protect yourself and your community.</p>
+                        <a href="hazard_map.html" class="banner-btn">
+                            Explore Hazard Maps <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                    <div class="banner-decoration">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                </section>
+
+                <!-- Quick Access -->
+                <section class="dashboard-section" data-aos="fade-up">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-eyebrow">YOUR LIFE9 TOOLS</p>
+                            <h2>Explore your resources</h2>
+                        </div>
+                        <p>Useful tools to help you understand and prepare for disaster risks.</p>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <a href="quizzes.html" class="resource-card">
+                                <div class="resource-icon quiz-icon"><i class="bi bi-patch-question"></i></div>
+                                <div class="resource-text">
+                                    <h3>Knowledge Quizzes</h3>
+                                    <p>Test your disaster awareness and learn something new.</p>
+                                </div>
+                                <i class="bi bi-arrow-up-right resource-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="hazard_map.html" class="resource-card">
+                                <div class="resource-icon map-icon"><i class="bi bi-map"></i></div>
+                                <div class="resource-text">
+                                    <h3>Hazard Maps</h3>
+                                    <p>Explore disaster risks and information across Myanmar.</p>
+                                </div>
+                                <i class="bi bi-arrow-up-right resource-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="report_hub.html" class="resource-card">
+                                <div class="resource-icon report-icon"><i class="bi bi-megaphone"></i></div>
+                                <div class="resource-text">
+                                    <h3>Report Hub</h3>
+                                    <p>Share disaster experiences and help raise awareness.</p>
+                                </div>
+                                <i class="bi bi-arrow-up-right resource-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weather and Preparedness -->
+                <section class="dashboard-section" data-aos="fade-up">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-eyebrow">STAY INFORMED</p>
+                            <h2>Your preparedness overview</h2>
+                        </div>
+                    </div>
+
+                    <div class="row g-3">
+                        <!-- Weather -->
+                        <div class="col-lg-5">
+                            <div class="weather-card dashboard-panel h-100">
+                                <div class="panel-heading">
+                                    <div>
+                                        <span class="panel-label">LOCAL CONDITIONS</span>
+                                        <h3>Current Weather</h3>
+                                    </div>
+                                    <div class="panel-heading-icon"><i class="bi bi-cloud-sun"></i></div>
+                                </div>
+                                <div class="weather-main">
+                                    <div class="weather-temperature" id="weather-temperature">-- °C</div>
+                                    <div class="weather-condition">
+                                        <i class="bi bi-cloud-sun-fill" id="weather-icon"></i>
+                                        <span id="weather-description">Loading weather...</span>
+                                    </div>
+                                </div>
+                                <div class="weather-note">
+                                    <i class="bi bi-info-circle"></i>
+                                    <p>Weather conditions can change. Stay aware of forecasts and official warnings in your area.</p>
+                                </div>
+                                <a href="https://open-meteo.com/" target="_blank" rel="noopener" class="source-link">
+                                    Weather data by Open-Meteo <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Preparedness Checklist -->
+                        <div class="col-lg-7">
+                            <div class="preparedness-card dashboard-panel h-100">
+                                <div class="panel-heading">
+                                    <div>
+                                        <span class="panel-label">SMALL STEPS MATTER</span>
+                                        <h3>Your Preparedness Checklist</h3>
+                                    </div>
+                                    <div class="panel-heading-icon"><i class="bi bi-clipboard2-check"></i></div>
+                                </div>
+                                <p class="panel-description">Build safer habits by completing these important tasks.</p>
+
+                                <div class="quest-item">
+                                    <label for="quest-1">
+                                        <span class="quest-check-icon"><i class="bi bi-telephone"></i></span>
+                                        <span>Save an emergency contact number</span>
+                                    </label>
+                                    <input type="checkbox" id="quest-1">
+                                </div>
+                                <div class="quest-item">
+                                    <label for="quest-2">
+                                        <span class="quest-check-icon"><i class="bi bi-geo-alt"></i></span>
+                                        <span>Explore the hazard risks in your region</span>
+                                    </label>
+                                    <input type="checkbox" id="quest-2">
+                                </div>
+                                <div class="quest-item">
+                                    <label for="quest-3">
+                                        <span class="quest-check-icon"><i class="bi bi-people"></i></span>
+                                        <span>Discuss an emergency plan with your family</span>
+                                    </label>
+                                    <input type="checkbox" id="quest-3">
+                                </div>
+                                <div class="quest-item">
+                                    <label for="quest-4">
+                                        <span class="quest-check-icon"><i class="bi bi-bag-check"></i></span>
+                                        <span>Prepare an emergency supply kit</span>
+                                    </label>
+                                    <input type="checkbox" id="quest-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Planning Section -->
+                <section class="dashboard-section planning-section" data-aos="fade-up">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-eyebrow">PLAN AHEAD</p>
+                            <h2>Organise your next steps</h2>
+                        </div>
+                        <p>Keep track of preparedness activities and important dates.</p>
+                    </div>
+
+                    <div class="row g-3">
+                        <!-- To-do list -->
+                        <div class="col-lg-7">
+                            <div class="dashboard-panel planning-card h-100">
+                                <div class="panel-heading">
+                                    <div>
+                                        <span class="panel-label">YOUR ACTION PLAN</span>
+                                        <h3>Preparedness To-do List</h3>
+                                    </div>
+                                    <div class="panel-heading-icon"><i class="bi bi-list-check"></i></div>
+                                </div>
+                                <p class="panel-description">Add tasks you want to complete to improve your disaster readiness.</p>
+                                <div class="todo-input-row">
+                                    <input type="text" id="to-do-input" placeholder="Add a preparedness task..." aria-label="New task">
+                                    <button id="add-to-do-btn" aria-label="Add task"><i class="bi bi-plus-lg"></i> Add</button>
+                                </div>
+                                <ul id="to-do-list-container"></ul>
+                                <div class="todo-empty-note">
+                                    <i class="bi bi-lightbulb"></i>
+                                    Start with simple tasks, such as checking emergency supplies or saving important contacts.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Calendar -->
+                        <div class="col-lg-5">
+                            <div class="dashboard-panel calendar-card h-100">
+                                <div class="panel-heading">
+                                    <div>
+                                        <span class="panel-label">KEEP TRACK</span>
+                                        <h3>Calendar</h3>
+                                    </div>
+                                    <div class="panel-heading-icon"><i class="bi bi-calendar-week"></i></div>
+                                </div>
+                                <p class="panel-description">Use your calendar to plan preparedness activities.</p>
+                                <div class="calendar-box">
+                                    <div class="calendar-header">
+                                        <button id="prev-month" aria-label="Previous month"><i class="bi bi-chevron-left"></i></button>
+                                        <h3 id="calendar-month"></h3>
+                                        <button id="next-month" aria-label="Next month"><i class="bi bi-chevron-right"></i></button>
+                                    </div>
+                                    <div class="calendar-grid" id="calendar-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Closing Reminder -->
+                <div class="dashboard-footer-note" data-aos="fade-up">
+                    <i class="bi bi-shield-fill-check"></i>
+                    <div>
+                        <h3>Prepared communities are safer communities.</h3>
+                        <p>Stay informed, support one another, and remember that preparation can make a difference.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS -->
+    <script src="external/dashboard.js"></script>
+    <script src="external/sidebar.js"></script>
+    <script src="external/auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+body{
+    background-color: #f1f9ff;
+}
+
+/* the image */
+.account-filler-img{
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* form */
+.custonmization-container{
+    background-color: white;
+    border-radius: 15px;
+}
+
+.account-input{
+    border-radius: 10px;
+}
+
+#account-form button, .logout-btn{
+    border-radius: 10px;
+    width: 35%;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+
+.wrong-info-tag{
+    display: none;
+}
+
+
+/* preview */
+.preview-container{
+    background-color: white;
+    padding: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    transition: 0.2s;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.preview-container:hover{
+    transform: translateY(-5px);
+}
+
+#profile-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 2px solid white;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    background-color: #134989;
+    background-size: cover;
+    margin-bottom: 25px;
+    font-size: 100px;
+    color: white;
+}
+
+.info-container{
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.info-container p{
+    margin: 0;
+}
+
+@media (max-width:768px) {
+    .mobile-middle h3{
+        text-align: center;
+    }
+}
+
+.account-section {
+    min-height: 100vh;
+    padding-bottom: 60px;
+    background: #f1f9ff;
+}
+
+.account-filler-img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.account-section .container {
+    position: relative;
+    margin-top: -90px;
+    max-width: 1150px;
+}
+
+.account-section .title-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.custonmization-container,
+.preview-container {
+    background: #fff;
+    border: 1px solid #dceaf5;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(19, 73, 137, 0.08);
+}
+
+.custonmization-container {
+    padding: 32px !important;
+}
+
+#account-form h6 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 18px 0 8px;
+    color: #134989;
+}
+
+.account-input {
+    border: 1px solid #cbdceb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    background: #fbfdff;
+}
+
+.account-input:focus {
+    border-color: #347bb8;
+    box-shadow: 0 0 0 3px rgba(52, 123, 184, 0.12);
+    background: #fff;
+}
+
+#account-bio {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.wrong-info-tag {
+    display: none;
+    font-size: 0.9rem;
+    margin-top: 7px;
+}
+
+.preview-container {
+    min-height: 450px;
+    height: auto;
+    padding: 35px 25px;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+#profile-container {
+    width: 145px;
+    height: 145px;
+    min-width: 145px;
+    border: 5px solid #e8f3fc;
+    border-radius: 50%;
+    background-color: #134989;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 600;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.info-container {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: none;
+}
+
+#fullname-preview {
+    color: #134989;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#username-preview {
+    color: #5684a8;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#bio-preview {
+    color: #536779;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    .account-section .container {
+        margin-top: -65px;
+    }
+
+    .account-section .title-text {
+        text-align: center;
+        font-size: 1.9rem;
+    }
+
+    .custonmization-container {
+        padding: 24px !important;
+    }
+
+    .preview-container {
+        min-height: 350px;
+    }
+}
+
+/* Account Buttons */
+.account-buttons {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.save-changes-btn, .logout-btn {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    height: 46px;
+    min-height: 46px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transform: none;
+}
+.save-changes-btn:hover {
+    background-color: #0d3768;
+    box-shadow: 0 6px 15px rgba(19, 73, 137, 0.2);
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #a31000fd;
+    box-shadow: 0 6px 15px rgba(188, 20, 0, 0.15);
+    color: white;
+}
+
+@media (max-width: 400px) {
+    .account-buttons {
+        flex-direction: column;
+    }
+
+    .save-changes-btn, .logout-btn {
+        width: 100%;
+    }
+}
+
+.account-section{
+    min-height: 100vh;
+    background-color: #f1f9ff;
+    padding-bottom: 60px;
+}
+
+.account-banner{
+    position: relative;
+    width: 100%;
+}
+
+.account-filler-img{
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.account-banner .title-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.account-section .container{
+    position: relative;
+    margin-top: 0;
+    max-width: 1150px;
+}
+
+@media (max-width: 768px){
+    .account-filler-img{
+        height: 160px;
+    }
+}
+
+/* Remove profile btn */
+.remove-profile-btn{
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 8px 13px;
+    border: 1px solid #d9a5a5;
+    border-radius: 7px;
+    background-color: white;
+    color: #b84040;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.remove-profile-btn:hover{
+    background-color: #fff0f0;
+    border-color: #b84040;
+}

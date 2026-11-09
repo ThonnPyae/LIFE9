@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | LIFE9</title>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="external/index.css">
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <!-- Web Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Brand/Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="image/LIFE9-Logo.png" class="img-fluid logo-img" alt="LIFE9 Logo">
+            </a>
+            <a class="navbar-brand m-title-text fw-bold" href="index.html">LIFE9</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white-50" aria-current="page" href="index.html"><i class="bi bi-house-door nav-icon"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="aboutus.html">About us</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white-50 hover-white" href="#" id="disasterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="disasterDropdown">
+                            <li><a class="dropdown-item" href="types.html">Disaster Types</a></li>
+                            <li><a class="dropdown-item" href="high_risk.html">High-risk Areas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="news.html">Recent News</a></li>
+                            <li><a class="dropdown-item" href="recovery.html">Response & Recovery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+
+                <!-- Login/signup -->
+                <div class="d-flex align-items-center gap-2 justify-content-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign in</a>
+                    <a href="signup.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+        <div class="hero-content">
+            <p class="hero-label"><i class="bi bi-shield-check me-2"></i>DISASTER PREPAREDNESS STARTS HERE</p>
+            <h1 class="hero-text fw-bold">BE READY.<br>STAY <span>SAFE.</span></h1>
+            <p class="hero-subtitle">Because every second counts.</p>
+            <p class="hero-description">Learn about disaster risks, discover practical safety tips, and help build a more resilient Myanmar.</p>
+            <div class="hero-buttons">
+                <a href="types.html" class="hero-cta">Explore Disasters <i class="bi bi-arrow-right ms-2"></i></a>
+                <a href="#preparedness" class="hero-secondary-cta">How to Prepare <i class="bi bi-chevron-down ms-2"></i></a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    
+    <!-- why disaster preparedness matters -->
+    <section class="issue-section py-5" data-aos="fade-up">
+        <div class="container py-lg-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img src="https://e3.365dm.com/25/03/768x432/skynews-mandalay-myanmar_6871570.jpg?20250330182122"
+                        alt="The impact of a natural disaster on a community"
+                        class="issue-image">
+                </div>
+                <div class="col-lg-7">
+                    <p class="issue-eyebrow">UNDERSTANDING THE RISK</p>
+                    <h2 class="issue-title">Why Disaster Preparedness Matters</h2>
+                    <p class="issue-description">
+                        Myanmar faces natural hazards such as floods, cyclones,
+                        earthquakes and landslides. These events can damage homes,
+                        disrupt essential services and put lives at risk.
+                    </p>
+                    <p class="issue-description">
+                        Although we cannot prevent every natural hazard, understanding
+                        the risks and knowing how to respond can help reduce harm.
+                        Access to reliable information is an important first step
+                        towards safer, more resilient communities.
+                    </p>
+                    <a href="types.html" class="issue-link">
+                        Understand the risks
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <div class="issue-points">
+                        <div class="issue-point">
+                            <i class="bi bi-exclamation-triangle"></i>
+                            <div>
+                                <h3>Multiple hazards</h3>
+                                <p>Different disasters require different safety measures.</p>
+                            </div>
+                        </div>
+                        <div class="issue-point">
+                            <i class="bi bi-house-exclamation"></i>
+                            <div>
+                                <h3>Community impacts</h3>
+                                <p>Disasters can affect homes, livelihoods and essential services.</p>
+                            </div>
+                        </div>
+                        <div class="issue-point">
+                            <i class="bi bi-shield-check"></i>
+                            <div>
+                                <h3>Preparedness saves time</h3>
+                                <p>Knowing what to do helps people respond more effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Disaster Statistics Section -->
+    <section class="statistics-section" data-aos="fade-up">
+        <div class="container">
+            <div class="statistics-heading">
+                <h2>Disasters by the Numbers</h2>
+                <p>Explore the global impact of disasters and why preparedness matters for safer communities.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="statistics-card">
+                        <div class="statistics-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3 class="count-up" data-count="202.4" data-decimals="1" data-suffix=" Million">0</h3>
+                        <h4>People Displaced</h4>
+                        <p>Disaster-related internal displacements recorded worldwide between 2015 and 2024.</p>
+                        <span>Source: IDMC, Global Report on Internal Displacement 2025</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="statistics-card">
+                        <div class="statistics-icon"><i class="bi bi-globe-asia-australia"></i></div>
+                        <h3 class="count-up" data-count="200" data-suffix="+">0</h3>
+                        <h4>Natural Hazards</h4>
+                        <p>Different hazard events can threaten communities, infrastructure and livelihoods around the world.</p>
+                        <span>Explore disaster risks and prepare for local hazards.</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="statistics-card">
+                        <div class="statistics-icon"><i class="bi bi-shield-check"></i></div>
+                        <h3 class="count-up" data-count="24" data-suffix=" Hours">0</h3>
+                        <h4>Early Warning</h4>
+                        <p>Providing 24 hours of warning before a hazardous event can reduce the resulting damage by 30%.</p>
+                        <span>Source: UN Early Warnings for All initiative</span>
+                    </div>
+                </div>
+            </div>
+            <p class="statistics-note">Preparedness, reliable warnings and community action can help reduce disaster risks.</p>
+        </div>
+    </section>
+
+
+    <!-- Preparedness section -->
+    <section class="preparedness-section" id="preparedness">
+        <div class="container">
+            <div class="section-heading text-center">
+                <p class="section-eyebrow">SMALL STEPS, BIG DIFFERENCE</p>
+                <h2 class="section-title">Be Prepared, Not Scared.</h2>
+                <p class="section-description">You cannot prevent every disaster, but you can take steps to reduce its impact on you and your community.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="preparedness-card">
+                        <div class="preparedness-icon"><i class="bi bi-backpack2"></i></div>
+                        <span class="card-number">01</span>
+                        <h3>Prepare an Emergency Kit</h3>
+                        <p>Keep essential supplies ready, including drinking water, food, a flashlight, a first-aid kit, and important documents.</p>
+                        <a href="types.html" class="section-link">Learn about disaster safety <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="preparedness-card">
+                        <div class="preparedness-icon"><i class="bi bi-signpost-2"></i></div>
+                        <span class="card-number">02</span>
+                        <h3>Make a Safety Plan</h3>
+                        <p>Know your evacuation routes, identify a safe meeting place, and discuss what to do with your family before an emergency.</p>
+                        <a href="recovery.html" class="section-link">Find helpful information <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="preparedness-card">
+                        <div class="preparedness-icon"><i class="bi bi-broadcast"></i></div>
+                        <span class="card-number">03</span>
+                        <h3>Stay Informed</h3>
+                        <p>Follow trusted weather forecasts and official emergency announcements so you can respond to warnings promptly.</p>
+                        <a href="news.html" class="section-link">Explore recent news <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What can we do section -->
+    <h3 class="title-text text-center blue-text mt-5 barlow-condensed-semibold">What can we do?</h3>
+    <section class="slider-section py-2">
+        <div class="container d-flex justify-content-center">
+            <div class="slider-container">
+                <div class="left-slide px-4">
+                    <div class="slide-content px-5">
+                        <h2>Awareness</h2>
+                        <p>In several categories on our website, readers can learn about common disaster occurrences in Myanmar. By having awareness, you will be able to prepare for disasters in advance.</p>
+                    </div>
+                    <div class="slide-content px-5">
+                        <h2>Tools</h2>
+                        <p>Our website provides interactive tools like quizzes and local hazard mapping for visitors to learn about existing disasters and plan for future risks.</p>
+                    </div>
+                    <div class="slide-content px-5">
+                        <h2>Your Voice Matters</h2>
+                        <p>We improve our website based on visitors’ survey responses. By helping answer a few questions in our survey of the FAQ section, we can more accurately design our mappings to ensure better safety.</p>
+                        <button class="blue-border btn wcwd-login-btn"><a href="login.html" class="blue-text">Sign in to get access to survey</a></button>
+                    </div>
+                </div>
+
+                <!-- Action buttons -->
+                <div class="action-buttons">
+                    <button class="down-button" type="button" aria-label="Previous slide">
+                        <i class="bi bi-arrow-down-square"></i>
+                    </button>
+
+                    <button class="up-button" type="button" aria-label="Next slide">
+                        <i class="bi bi-arrow-up-square"></i>
+                    </button>
+                </div>
+
+                <div class="right-slide">
+                    <div id="awareness-div">
+                        <h4 class="number-mobile">1#</h4>
+                        <h2 class="text-mobile">Awareness</h2>
+                        <p class="text-mobile">In several categories on our website, readers can learn about common disaster occurrences in Myanmar. By having awareness, you will be able to prepare for disasters in advance.</p>
+                    </div>
+                    <div id="tools-div">
+                        <h4 class="number-mobile">2#</h4>
+                        <h2 class="text-mobile">Tools</h2>
+                        <p class="text-mobile">Our website provides interactive tools like quizzes and local hazard mapping for visitors to learn about existing disasters and plan for future risks.</p>
+                    </div>
+                    <div id="cta-div">
+                        <h4 class="number-mobile">3#</h4>
+                        <h2 class="text-mobile">Your Voice Matters</h2>
+                        <p class="text-mobile">We improve our website based on visitors’ survey responses. By helping answer a few questions in our survey of the FAQ section, we can more accurately design our mappings to ensure better safety.</p>
+                        <button class="btn wcwd-login-btn text-mobile"><a href="login.html" class="access-survey-link">Sign in to get access to survey</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    
+    <!-- Explore LIFE9 -->
+    <section class="explore-section py-5" id="explore">
+        <div class="container py-lg-4">
+            <div class="explore-heading text-center">
+                <p class="explore-eyebrow">YOUR GUIDE TO DISASTER READINESS</p>
+                <h2 class="explore-title">Explore What LIFE9 Offers</h2>
+                <p class="explore-description">
+                    Find reliable information, understand disaster risks and
+                    discover resources to help you and your community stay prepared.
+                </p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="explore-card">
+                        <div class="explore-icon">
+                            <i class="bi bi-globe-asia-australia"></i>
+                        </div>
+                        <p class="explore-number">01 / DISCOVER</p>
+                        <h3>Understand Disasters</h3>
+                        <p>Learn about different natural hazards, their causes,
+                        their impacts and the areas that may be at risk.</p>
+                        <a href="types.html" class="explore-link">
+                            Explore disaster types <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="explore-card">
+                        <div class="explore-icon blue-icon">
+                            <i class="bi bi-map"></i>
+                        </div>
+                        <p class="explore-number">02 / LEARN</p>
+                        <h3>Explore Local Risks</h3>
+                        <p>Explore high-risk areas, learn from disaster information
+                        and keep up with recent developments in Myanmar.</p>
+                        <a href="high_risk.html" class="explore-link">
+                            Explore high-risk areas <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="explore-card">
+                        <div class="explore-icon">
+                            <i class="bi bi-journal-check"></i>
+                        </div>
+                        <p class="explore-number">03 / PREPARE</p>
+                        <h3>Find Safety Resources</h3>
+                        <p>Get practical guidance about disaster response,
+                        recovery and frequently asked preparedness questions.</p>
+                        <a href="recovery.html" class="explore-link">
+                            Explore safety resources <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to action section -->
+    <section class="cta-section" data-aos="fade-in">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-7">
+                    <p class="cta-label">YOUR SAFETY STARTS HERE</p>
+                    <h2>Ready to Take Action?</h2>
+                    <p class="cta-description">
+                        Discover practical ways to prepare for natural hazards and reduce disaster risks.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="types.html" class="cta-button cta-primary">
+                            Start Preparing <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="faq.html" class="cta-button cta-secondary">
+                            Have questions? Visit our FAQ <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section container-fluid dark-bg">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-3">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <span class="footer-logo-wrap">
+                            <img src="image/LIFE9-Logo.png" alt="LIFE9 logo" class="footer-logo">
+                        </span>
+                        <h3 class="footer-brand-name white-text fw-bold barlow-condensed-regular m-0">LIFE9</h3>
+                    </a>
+                </div>
+                <p class="footer-description white-text barlow-condensed-regular">
+                    The baseline for a secure tomorrow.
+                </p>
+                <div class="footer-social-links d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="footer-media-link"><i class="bi bi-facebook"></i></a>
+                    <a href="https://web.telegram.org/" aria-label="Telegram" class="footer-media-link"><i class="bi bi-telegram"></i></a>
+                    <a href="https://x.com/" aria-label="X" class="footer-media-link"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Quick Links</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="index.html" class="footer-link white-text">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link white-text">About Us</a></li>
+                        <li><a href="news.html" class="footer-link white-text">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Explore</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="types.html" class="footer-link white-text">Types of Disasters</a></li>
+                        <li><a href="high_risk.html" class="footer-link white-text">High-risk Areas</a></li>
+                        <li><a href="faq.html" class="footer-link white-text">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Contact Us</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li>
+                            <a href="tel:+959776964436" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97769 64436
+                            </a>
+                            <a href="tel:+959740881988" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97408 81988
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@life9.org" class="footer-link white-text">
+                                <i class="bi bi-envelope-fill pe-1"></i> contact@life9.org
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/PkofouHPTJ3KPXVG9" class="footer-link white-text">
+                                <i class="bi bi-geo-alt-fill pe-1"></i> Thukha Chanthar Condo, Thumana 3rd street, Yangon, Myanmar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-line my-4">
+
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        LIFE9 © 2026 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end footer-ref-policy-text">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        <a href="policy.html" class="white-text footer-link">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSbL_c72sZwKxrASTaIBeT9byPQWptYKzQbmNh1aTp_PRlJlacBZF-W8RmGcepH4gSk0lrW5FfQBq44/pub" class="white-text footer-link">References</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- External JS -->
+    <script src="external/index.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

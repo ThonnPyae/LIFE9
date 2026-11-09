@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Disasters | LIFE9</title>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="external/types.css">
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <!-- Web Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Brand/Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="image/LIFE9-Logo.png" class="img-fluid logo-img" alt="LIFE9 Logo">
+            </a>
+            <a class="navbar-brand m-title-text fw-bold" href="index.html">LIFE9</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="aboutus.html">About us</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle text-white-50" href="#" id="disasterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-exclamation-triangle nav-icon"></i>Disasters</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="disasterDropdown">
+                            <li><a class="dropdown-item active" href="types.html" aria-current="page">Disaster Types</a></li>
+                            <li><a class="dropdown-item" href="high_risk.html">High-risk Areas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="news.html">Recent News</a></li>
+                            <li><a class="dropdown-item" href="recovery.html">Response & Recovery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+
+                <!-- Login/signup -->
+                <div class="d-flex align-items-center gap-2 justify-content-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign in</a>
+                    <a href="signup.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <p class="eyebrow">DISASTER PREPAREDNESS</p>
+            <h1 class="hero-text">TYPES OF DISASTERS</h1>
+            <p class="para-text">
+                Disasters are broadly split into natural disasters and man-made disasters. <br>
+                Our website focuses on natural disasters and their risk reduction.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <div class="main-layout-wrapper d-flex flex-column flex-xl-row">
+        
+        <!-- Sidebar -->
+        <aside class="disaster-sidebar d-flex flex-column bg-white shadow-sm p-3">
+            <h4 class="h5 fw-bold text-dark mb-3 px-2 d-none d-xl-block">Explore</h4>
+            <div class="sidebar-nav-scroll d-flex flex-xl-column gap-1 overflow-x-auto">
+                <a href="#types" class="sidebar-link text-decoration-none px-3 py-2 rounded-2 text-secondary">Types of Disasters</a>
+                <a href="#disasters" class="sidebar-link text-decoration-none px-3 py-2 rounded-2 text-secondary">Major Disasters</a>
+                <a href="#causes" class="sidebar-link text-decoration-none px-3 py-2 rounded-2 text-secondary">Causes</a>
+                <a href="#consequences" class="sidebar-link text-decoration-none px-3 py-2 rounded-2 text-secondary">Consequences</a>
+                <a href="#response" class="sidebar-link text-decoration-none px-3 py-2 rounded-2 text-secondary">Response & Recovery</a>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-main-area flex-grow-1">
+            
+            <!-- Types of disasters section -->
+            <section class="types light-blue-bg" id="types">
+                <div class="container types-content">
+                    <h2 class="m-title-text text-center mb-5 barlow-condensed-semibold blue-text">Two Main Types:</h2>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 col-md-6" data-aos="zoom-in-up">
+                            <div class="card rounded-3 shadow disaster-card">
+                                <div class="disaster-card-inner">
+                                    <div class="disaster-card-front">
+                                        <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" class="card-img-top rounded-3" alt="natural disasters">
+                                        <h3 class="sub-heading fw-bold mx-auto mt-4">Natural Disasters</h3>
+                                        <p class="flip-hint">Hover to discover ↗</p>
+                                    </div>
+                                    <div class="disaster-card-back natural-back">
+                                        <h3 class="sub-heading fw-bold">Natural Disasters</h3>
+                                        <div class="disaster-line"></div>
+                                        <p class="para-text">catastrophic events caused by the Earth's natural forces or atmospheric processes that affects the environment and causes social and economic losses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 ms-lg-4" data-aos="zoom-in-up">
+                            <div class="card rounded-3 shadow disaster-card">
+                                <div class="disaster-card-inner">
+                                    <div class="disaster-card-front">
+                                        <img src="https://plus.unsplash.com/premium_photo-1716078137428-aabec80b2c34?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" class="card-img-top rounded-3" alt="man-made disasters">
+                                        <h3 class="sub-heading fw-bold mx-auto mt-4">Man-made Disasters</h3>
+                                        <p class="flip-hint">Hover to discover ↗</p>
+                                    </div>
+                                    <div class="disaster-card-back manmade-back">
+                                        <h3 class="sub-heading fw-bold">Man-made Disasters</h3>
+                                        <div class="disaster-line"></div>
+                                        <p class="para-text">catastrophic events caused by human intent, error, negligence, or the failure of a system, leading to severe harm to the people and the environment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Natural disasters section -->
+            <section class="disasters" id="disasters">
+                <div class="container">
+                    <h2 class="m-title-text mb-2 barlow-condensed-semibold text-center">Emergency Information</h2>
+                    <p class="para-text mb-4 barlow-condensed-medium text-center">for eight natural disasters</p>
+                    <!-- Red Disaster Cards -->
+                    <div class="row g-4">
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('earthquakes')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Earthquakes</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu2adqCUcqXbPrYw-nR8g_wzW63VzqVeBgX5Cr42El3w&s=10" alt="Earthquake">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('floods')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Floods</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyLLvmhLy94MOxi_Zj-2ATBuSglYvndnqtkPY0avaFNrsLF4MsY02jg5wP&s=10" alt="Floods">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('landslides')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Landslides</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://media.licdn.com/dms/image/v2/D4D12AQEMHhdfnoWnJA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1680375976698?e=2147483647&v=beta&t=nm7iXLUKoZZ-iZny_m7gPmAa1_WOLSJz5-93231YhbI" alt="Landslides">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('wildfires')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Wildfires</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOLgyBxXKayJj-SBmCmlghPHxaTyma8nuJsl3N3IpvZQ&s=10" alt="Wildfires">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blue Disaster Cards -->
+                    <div class="row g-4 mt-5">
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="blue-disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('cyclones')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Cyclones</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCY2FZIb_fcCeLpUh-M2FItXWu6q18Fp9KctsgfK1Ltjrnnc8vv3u0UOU&s=10" alt="Cyclone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="blue-disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('tsunamis')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Tsunamis</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://i.natgeofe.com/n/0f9e3b7a-d3ca-4418-8e61-f605b4e04bc5/02-rikuzentakata-japan.jpg" alt="Tsunami">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="blue-disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('tornadoes')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Tornadoes</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://www.munichre.com/content/dam/munichre/mrm/royalty-free-shutterstock/shutterstock_81366340.jpg/_jcr_content/renditions/original.image_file.1200.802.file/shutterstock_81366340.jpg" alt="Tornado">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="blue-disaster-box d-flex align-items-center justify-content-between" data-bs-toggle="modal" data-bs-target="#disasterModal" onclick="showDisasterInfo('hurricanes')">
+                                <div class="disaster-text d-flex flex-column justify-content-between h-100">
+                                    <h3 class="sub-heading fw-bold">Hurricanes</h3>
+                                    <span class="card-action">View Info <i class="bi bi-arrow-right"></i></span>
+                                </div>
+                                <div class="disaster-img">
+                                    <img class="img-fluid" src="https://insideclimatenews.org/wp-content/uploads/2023/06/hurricane_joe-raedle-getty-scaled.jpg" alt="Hurricane">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal (information box) -->
+            <div class="modal fade" id="disasterModal" tabindex="-1" aria-labelledby="disasterModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-white" id="modalHeader">
+                            <div class="d-flex align-items-center gap-3">
+                                <span id="modalHeaderBadge" class="badge bg-white text-dark px-3 py-2 rounded-pill fw-semibold shadow-sm">Emergency Info</span>
+                                <h5 class="modal-title fw-bold fs-3 mb-0 text-white" id="disasterModalLabel">Disaster Information</h5>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Info box -->
+                            <div class="disaster-info-card">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-md-5">
+                                        <img id="modalDisasterImg" src="" class="modal-disaster-img" alt="Disaster Image">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h6 class="text-uppercase text-muted fw-bold fs-7 mb-2">Overview</h6>
+                                        <p id="modalDisasterDesc" class="text-secondary fs-6 mb-0 lh-base"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Safety guidelines box -->
+                            <div class="disaster-safety-card" id="modalSafetyCard">
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <i class="bi bi-shield-exclamation text-danger fs-5"></i>
+                                    <h6 class="fw-bold mb-0 text-dark">Safety Measures & Preparation</h6>
+                                </div>
+                                <ul id="modalDisasterSafety" class="list-group list-group-flush mb-0">
+                                    <!-- Safety items here -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0 pt-0 pb-4 px-4">
+                            <button type="button" class="btn btn-dark w-100 py-3 rounded-pill fw-bold shadow-sm" data-bs-dismiss="modal">Got it, Close Info Box</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Causes section -->
+            <section class="causes" id="causes">
+                <div class="container">
+                    <h2 class="text-center blue-text mb-5 m-title-text fw-bold barlow-condensed-medium">Causes of Natural Disasters</h2>
+
+                    <div class="row g-4 align-items-stretch">
+                        <!-- Left Navigation Buttons (Tabs) -->
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column gap-3" id="disasterTab" role="tablist">
+                                <button class="btn disaster-tab-btn text-start p-3 active" id="heavy-rainfall-tab" data-bs-toggle="pill" data-bs-target="#heavy-rainfall" type="button" role="tab" aria-controls="heavy-rainfall" aria-selected="true">
+                                    Heavy Rainfall and Storms
+                                </button>
+                                <button class="btn disaster-tab-btn text-start p-3" id="tectonic-tab" data-bs-toggle="pill" data-bs-target="#tectonic" type="button" role="tab" aria-controls="tectonic" aria-selected="false">
+                                    Tectonic Activity
+                                </button>
+                                <button class="btn disaster-tab-btn text-start p-3" id="volcanic-tab" data-bs-toggle="pill" data-bs-target="#volcanic" type="button" role="tab" aria-controls="volcanic" aria-selected="false">
+                                    Volcanic Activity
+                                </button>
+                                <button class="btn disaster-tab-btn text-start p-3" id="lack-of-rain-tab" data-bs-toggle="pill" data-bs-target="#lack-of-rain" type="button" role="tab" aria-controls="lack-of-rain" aria-selected="false">
+                                    Extended lack of rain
+                                </button>
+                                <button class="btn disaster-tab-btn text-start p-3" id="erosion-tab" data-bs-toggle="pill" data-bs-target="#erosion" type="button" role="tab" aria-controls="erosion" aria-selected="false">
+                                    Erosion and Deposition
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Content Box -->
+                        <div class="col-lg-8">
+                            <div class="tab-content disaster-content-box p-4 h-100" id="disasterTabContent">
+                                <!-- Heavy Rainfall (active)-->
+                                <div class="tab-pane fade show active" id="heavy-rainfall" role="tabpanel" aria-labelledby="heavy-rainfall-tab">
+                                    <div class="container">
+                                        <h3 class="barlow-condensed-semibold mb-3">Heavy Rainfall and Storms</h3>
+                                        <p class="para-text">Excessive precipitation, tropical storms, and typhoons can quickly overwhelm drainage systems, leading to severe flash floods, urban flooding, and catastrophic landslides.</p>
+                                    
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col-lg-6 mt-3">
+                                                <img src="https://cdn.pixabay.com/photo/2020/02/05/17/47/storm-4821860_1280.jpg" class="img-fluid rounded-4 cause-img" alt="Cause image">
+                                            </div>
+                                            <div class="col-lg-6 mt-3">
+                                                <p class="para-text">
+                                                    Strong winds and storm surges can damage buildings, uproot trees, and flood coastal communities. 
+                                                    These disasters become more severe when drainage systems are poorly maintained, forests are cleared, and waterways are blocked by waste.
+                                                    The intensity and duration of rainfall, along with geographical conditions, can determine the severity of the resulting damage.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tectonic Activity -->
+                                <div class="tab-pane fade" id="tectonic" role="tabpanel" aria-labelledby="tectonic-tab">
+                                    <div class="container">
+                                        <h3 class="barlow-condensed-semibold mb-3">Tectonic Activity</h3>
+                                        <p class="para-text">The movement and collision of Earth's tectonic plates build immense stress along fault lines, resulting in sudden energy releases that cause earthquakes and tsunamis.</p>
+
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col-lg-6 mt-3">
+                                                <img src="https://th.bing.com/th/id/R.1a4887421ecf43b7292e7a496a26688c?rik=QohSMosFhCqcdw&riu=http%3a%2f%2f37.media.tumblr.com%2f49eaaa37bb599b85c8c3bec815b6a21b%2ftumblr_n7qq998svs1qio57co1_500.gif&ehk=oJIUW%2fcwSdYXQNbmJtVbxYIXcwXW7VEDIknTyMDUMvQ%3d&risl=&pid=ImgRaw&r=0" class="img-fluid rounded-4 cause-img" alt="Cause image">
+                                            </div>
+                                            <div class="col-lg-6 mt-3">
+                                                <p class="para-text">
+                                                    The movement and interaction of tectonic plates can cause earthquakes, tsunamis, and volcanic activity.
+                                                    When stress builds up along faults in the Earth's crust, it may suddenly release energy, causing the ground to shake.
+                                                    Underwater earthquakes can displace large volumes of water, generating tsunamis that threaten coastal areas.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Volcanic Activity -->
+                                <div class="tab-pane fade" id="volcanic" role="tabpanel" aria-labelledby="volcanic-tab">
+                                    <div class="container">
+                                        <h3 class="barlow-condensed-semibold mb-3">Volcanic Activity</h3>
+                                        <p class="para-text">Volcanic eruptions release molten rock, ash, toxic gases, and pyroclastic flows from beneath the Earth's crust, posing severe hazards to surrounding populations and atmospheric stability.</p>
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col-lg-6 mt-3">
+                                                <img src="https://th.bing.com/th/id/R.cde72778c84d3f742d57af5186641f62?rik=yybA%2fmR1Ps7wUQ&riu=http%3a%2f%2fnature365.org%2fwp-content%2fuploads%2f2023%2f11%2fVolcanic-Activity.png&ehk=uCe8G6I2j4CZfUkqtBeKYpbhQKqlVgosRcCMib0TaiE%3d&risl=&pid=ImgRaw&r=0" class="img-fluid rounded-4 cause-img" alt="Cause image">
+                                            </div>
+                                            <div class="col-lg-6 mt-3">
+                                                <p class="para-text">
+                                                    Volcanic eruptions occur when magma, gases, and ash rise from beneath the Earth's surface and escape through openings in the crust.
+                                                    Eruptions may release lava flows, ash clouds, toxic gases, and fast-moving mixtures of hot gas and volcanic material called pyroclastic flows.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Extended Lack of Rain -->
+                                <div class="tab-pane fade" id="lack-of-rain" role="tabpanel" aria-labelledby="lack-of-rain-tab">
+                                    <div class="container">
+                                        <h3 class="barlow-condensed-semibold mb-3">Extended lack of rain</h3>
+                                        <p class="para-text">Prolonged meteorological droughts reduce water tables, deplete reservoirs, devastate agricultural yields, and significantly increase wildfire risks.</p>
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col-lg-6 mt-3">
+                                                <img src="https://thumbs.dreamstime.com/b/droughts-caused-climate-change-lack-rain-which-produces-water-scarcity-world-water-day-celebrated-every-march-250459527.jpg?w=992" class="img-fluid rounded-4 cause-img" alt="Cause image">
+                                            </div>
+                                            <div class="col-lg-6 mt-3">
+                                                <p class="para-text">
+                                                    Prolonged periods of little or no rainfall can lead to droughts, particularly in regions that depend on regular rainfall for agriculture and water supplies.
+                                                    High temperatures and increased evaporation can worsen these conditions by drying out soil, rivers, lakes, and reservoirs.
+                                                    Climate patterns, changing weather conditions, deforestation, and unsustainable water use can contribute to drought severity.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Erosion and Deposition -->
+                                <div class="tab-pane fade" id="erosion" role="tabpanel" aria-labelledby="erosion-tab">
+                                    <div class="container">
+                                        <h3 class="barlow-condensed-semibold mb-3">Erosion and Deposition</h3>
+                                        <p class="para-text">The gradual wearing away of topsoil and rock by wind, water, and ice—coupled with sediment accumulation—can destabilize slopes and alter river basins over time.</p>
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col-lg-6 mt-3">
+                                                <img src="https://tse3.mm.bing.net/th/id/OIP._7kerTDgK-GJ9QlKISsn5QHaFU?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" class="img-fluid rounded-4 cause-img" alt="Cause image">
+                                            </div>
+                                            <div class="col-lg-6 mt-3">
+                                                <p class="para-text">
+                                                    Erosion occurs when water, wind, waves, or ice wear away and transport soil, rock, and sediment from one place to another.
+                                                    Deposition happens when these materials settle in a new location, often changing the shape of riverbeds, coastlines, and landscapes.
+                                                    Heavy rainfall, strong currents, deforestation, and construction can accelerate erosion, while sediment buildup can make rivers and drainage channels shallower and reduce their capacity to carry water.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Consequences section -->
+            <div class="container consequences-section" id="consequences">
+                <h2 class="text-center mb-5 m-title-text fw-bold barlow-condensed-regular">The Consequences</h2>
+                
+                <div class="row g-4">
+                    <!-- Column 1 -->
+                    <div class="col-lg-6 d-flex flex-column gap-3">
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://img.magnific.com/vector-premium/joven-atleta-sienta-suelo-lesiones-visibles-rodeado-suministros-equipos-tratamiento-ilustracion-plana-personalizable-lesion_585735-36101.jpg" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Loss of Human Life and Injuries</p>
+                            </div>
+                        </div>
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://media.odi.org/images/illustration_PNG-min_c4hKulO.cdb12a2a.fill-1200x630.png" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Mass Displacement and Homelessness</p>
+                            </div>
+                        </div>
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://tse3.mm.bing.net/th/id/OIP.V42Ujpi8KKOOhnDIA2ZLLgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Severe Infrastructure and Property Damage</p>
+                            </div>
+                        </div>
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://tse2.mm.bing.net/th/id/OIP.YbySnXY0Rc_nNeta30uslgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Economic Collapse and Financial Loss</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-lg-6 d-flex flex-column gap-3">
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://img.magnific.com/premium-photo/impact-deforestation-clearing-forests-agriculture-leads-habitat-loss-environmental-degradation-concept-deforestation-agriculture-habitat-loss-environmental-degradation_864588-281942.jpg?w=1060" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Environmental Degradation and Habitat Loss</p>
+                            </div>
+                        </div>
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://static.vecteezy.com/system/resources/previews/000/438/473/non_2x/vector-magnifier-bacteria-and-virus-cells.jpg" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Outbreak of Waterborne and Infectious Diseases</p>
+                            </div>
+                        </div>
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://tse1.mm.bing.net/th/id/OIP.K2rNiuU_lBMYUWDviEprrAHaE6?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Food Scarcity and Agricultural Crises</p>
+                            </div>
+                        </div>
+
+                        <div class="consequence-card red-bg d-flex align-items-center p-2">
+                            <div class="consequence-icon-wrapper me-3">
+                                <img src="https://static.vecteezy.com/system/resources/previews/022/057/167/non_2x/depressed-woman-sitting-on-floor-and-hugging-knees-mental-health-concept-depression-bipolar-disorder-obsessive-compulsive-post-traumatic-stress-disorder-illustration-vector.jpg" alt="Consequence icon" class="consequence-icon">
+                            </div>
+                            <div class="consequence-text-wrapper flex-grow-1 pe-3">
+                                <p class="para-text white-text barlow-condensed-medium mb-0">Long-Term Psychological Trauma and Stress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <!-- Response & Recovery Section -->
+            <section class="rr-section" id="response">
+                <div class="container rr-content">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 rr-text">
+                            <span class="rr-label">STAY SAFE. REBUILD STRONGER.</span>
+                            <h3 class="sub-heading barlow-condensed-medium">Response & Recovery</h3>
+                            <p class="para-text barlow-condensed-regular">
+                                Knowing how to respond during a disaster can save lives. Learn about emergency assistance, first aid, safe evacuation, and ways to support affected communities as they recover and rebuild.
+                            </p>
+                            <a href="recovery.html" class="rr-btn">Learn More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="rr-img-wrapper">
+                                <div class="rr-img-circle"></div>
+                                <img class="rr-img" src="https://media.istockphoto.com/photos/search-and-rescue-picture-id480471509?k=20&m=480471509&s=612x612&w=0&h=buUJxz-Uhxx00g6DtlTBbnk4BERPGYlly6rgG3cgTXo=" alt="Volunteers providing disaster relief">
+                                <div class="rr-img-tag">
+                                    <i class="bi bi-heart-fill"></i>
+                                    <span>Stronger Together</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section container-fluid dark-bg">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-3">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <span class="footer-logo-wrap">
+                            <img src="image/LIFE9-Logo.png" alt="LIFE9 logo" class="footer-logo">
+                        </span>
+                        <h3 class="footer-brand-name white-text fw-bold barlow-condensed-regular m-0">LIFE9</h3>
+                    </a>
+                </div>
+                <p class="footer-description white-text barlow-condensed-regular">
+                    The baseline for a secure tomorrow.
+                </p>
+                <div class="footer-social-links d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="footer-media-link"><i class="bi bi-facebook"></i></a>
+                    <a href="https://web.telegram.org/" aria-label="Telegram" class="footer-media-link"><i class="bi bi-telegram"></i></a>
+                    <a href="https://x.com/" aria-label="X" class="footer-media-link"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Quick Links</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="index.html" class="footer-link white-text">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link white-text">About Us</a></li>
+                        <li><a href="news.html" class="footer-link white-text">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Explore</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="types.html" class="footer-link white-text">Types of Disasters</a></li>
+                        <li><a href="high_risk.html" class="footer-link white-text">High-risk Areas</a></li>
+                        <li><a href="faq.html" class="footer-link white-text">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Contact Us</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li>
+                            <a href="tel:+959776964436" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97769 64436
+                            </a>
+                            <a href="tel:+959740881988" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97408 81988
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@life9.org" class="footer-link white-text">
+                                <i class="bi bi-envelope-fill pe-1"></i> contact@life9.org
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/PkofouHPTJ3KPXVG9" class="footer-link white-text">
+                                <i class="bi bi-geo-alt-fill pe-1"></i> Thukha Chanthar Condo, Thumana 3rd street, Yangon, Myanmar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-line my-4">
+
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        LIFE9 © 2026 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end footer-ref-policy-text">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        <a href="policy.html" class="white-text footer-link">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSbL_c72sZwKxrASTaIBeT9byPQWptYKzQbmNh1aTp_PRlJlacBZF-W8RmGcepH4gSk0lrW5FfQBq44/pub" class="white-text footer-link">References</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- External JS -->
+    <script src="external/types.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

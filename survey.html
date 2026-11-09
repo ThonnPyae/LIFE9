@@ -1,0 +1,569 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Awareness Survey | LIFE9</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="external/survey.css">
+    <link rel="stylesheet" href="external/general_stylesheet.css">
+    <link rel="stylesheet" href="external/sidebar.css">
+
+    <!-- Web Favicon -->
+    <link rel="icon" type="image/x-icon" href="image/LIFE9-Logo.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Brand/Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="image/LIFE9-Logo.png" class="img-fluid logo-img" alt="LIFE9 Logo">
+            </a>
+            <a class="navbar-brand m-title-text fw-bold" href="index.html">LIFE9</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="aboutus.html">About us</a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white-50 hover-white" href="#" id="disasterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Disasters</a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="disasterDropdown">
+                            <li><a class="dropdown-item" href="types.html">Disaster Types</a></li>
+                            <li><a class="dropdown-item" href="high_risk.html">High-risk Areas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="news.html">Recent News</a></li>
+                            <li><a class="dropdown-item" href="recovery.html">Response & Recovery</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50 hover-white" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+
+                <!-- Login/signup -->
+                <div class="d-flex align-items-center gap-2 justify-content-center mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign in</a>
+                    <a href="signup.html" class="btn btn-outline-light rounded-pill px-4 py-1 text-white hover-black">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="survey-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">
+                    <i class="bi bi-clipboard2-check"></i> COMMUNITY SURVEY
+                </span>
+
+                <h1>YOUR VOICE.<br>OUR <span>SAFER</span> FUTURE.</h1>
+
+                <p>
+                    Understanding disaster awareness and preparedness starts with
+                    listening to our communities. Share your experiences and help
+                    us build a more disaster-resilient Myanmar.
+                </p>
+
+                <a href="#survey-form" class="btn survey-btn">
+                    Take the Survey <i class="bi bi-arrow-down"></i>
+                </a>
+            </div>
+
+            <div class="hero-decoration">
+                <i class="bi bi-shield-check"></i>
+                <span>Awareness</span>
+                <span>Preparedness</span>
+                <span>Resilience</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="survey-intro">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <span class="section-label">ABOUT THIS SURVEY</span>
+                    <h2>Every Response <span>Makes a Difference.</span></h2>
+                    <p>
+                        Disasters can affect anyone, anywhere. From floods and
+                        earthquakes to fires and extreme weather, being informed
+                        and prepared can make a meaningful difference.
+                    </p>
+                    <p>
+                        This survey aims to understand people's experiences,
+                        knowledge and preparedness regarding different types
+                        of disasters in Myanmar. Your responses will help us
+                        identify awareness gaps and encourage safer communities.
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="survey-info-card">
+                        <div class="info-item">
+                            <i class="bi bi-clock"></i>
+                            <div>
+                                <h5>Estimated Time</h5>
+                                <p>3–5 minutes</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-person-check"></i>
+                            <div>
+                                <h5>Participation</h5>
+                                <p>Voluntary and anonymous</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-shield-lock"></i>
+                            <div>
+                                <h5>Privacy</h5>
+                                <p>No personal identification required</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey form -->
+    <section class="survey-section" id="survey-form">
+        <div class="container">
+
+            <div class="survey-heading">
+                <span class="section-label">HAVE YOUR SAY</span>
+                <h2>Disaster Awareness & Preparedness</h2>
+                <p>Please answer the following questions honestly. There are no right or wrong answers.</p>
+            </div>
+
+            <form id="disasterSurvey">
+
+                <!-- SECTION 1 -->
+                <div class="question-section">
+                    <div class="question-section-title">
+                        <span>01</span>
+                        <div>
+                            <h3>About You</h3>
+                            <p>A little background about our respondents.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title" for="location">
+                            1. Where do you currently live?
+                            <span class="optional">Optional</span>
+                        </label>
+
+                        <select class="form-select" id="location" name="location">
+                            <option value="">Select your region or state</option>
+                            <option>Yangon Region</option>
+                            <option>Mandalay Region</option>
+                            <option>Naypyidaw Union Territory</option>
+                            <option>Ayeyarwady Region</option>
+                            <option>Bago Region</option>
+                            <option>Magway Region</option>
+                            <option>Sagaing Region</option>
+                            <option>Tanintharyi Region</option>
+                            <option>Kachin State</option>
+                            <option>Kayah State</option>
+                            <option>Kayin State</option>
+                            <option>Chin State</option>
+                            <option>Mon State</option>
+                            <option>Rakhine State</option>
+                            <option>Shan State</option>
+                            <option>Outside Myanmar</option>
+                        </select>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            2. Which age group do you belong to?
+                            <span class="optional">Optional</span>
+                        </label>
+
+                        <div class="option-grid">
+                            <label class="option-item"><input type="radio" name="age" value="Under 18"> Under 18</label>
+                            <label class="option-item"><input type="radio" name="age" value="18–25"> 18–25</label>
+                            <label class="option-item"><input type="radio" name="age" value="26–40"> 26–40</label>
+                            <label class="option-item"><input type="radio" name="age" value="41–60"> 41–60</label>
+                            <label class="option-item"><input type="radio" name="age" value="Above 60"> Above 60</label>
+                            <label class="option-item"><input type="radio" name="age" value="Prefer not to say"> Prefer not to say</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 2 -->
+                <div class="question-section">
+                    <div class="question-section-title">
+                        <span>02</span>
+                        <div>
+                            <h3>Disaster Experiences</h3>
+                            <p>Understanding how disasters affect our communities.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            3. Which of the following disasters have you experienced?
+                            <span class="required">*</span>
+                        </label>
+                        <p class="question-hint">Select all that apply.</p>
+
+                        <div class="option-grid">
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Earthquakes"> Earthquakes</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Floods"> Floods</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Cyclones and storms"> Cyclones and storms</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Landslides"> Landslides</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Droughts and heatwaves"> Droughts and heatwaves</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Fires"> Fires</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Human-made accidents"> Human-made accidents</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="Other disasters"> Other disasters</label>
+                            <label class="option-item"><input type="checkbox" name="experienced" value="None"> None</label>
+                        </div>
+                        <div class="invalid-feedback" id="experienceError">Please select at least one option.</div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title" for="impact">
+                            4. How have disasters affected you or your community?
+                        </label>
+
+                        <select class="form-select" id="impact" name="impact">
+                            <option value="">Choose an answer</option>
+                            <option>Damage to homes or property</option>
+                            <option>Injuries or health problems</option>
+                            <option>Loss of income or livelihoods</option>
+                            <option>Disruption to education or daily activities</option>
+                            <option>Displacement from home</option>
+                            <option>Multiple impacts</option>
+                            <option>No significant impact</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- SECTION 3 -->
+                <div class="question-section">
+                    <div class="question-section-title">
+                        <span>03</span>
+                        <div>
+                            <h3>Awareness & Knowledge</h3>
+                            <p>How familiar are you with disaster risks?</p>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            5. How would you rate your knowledge of disaster risks and their impacts?
+                            <span class="required">*</span>
+                        </label>
+
+                        <div class="rating-options">
+                            <label><input type="radio" name="knowledge" value="Very knowledgeable" required><span>Very knowledgeable</span></label>
+                            <label><input type="radio" name="knowledge" value="Somewhat knowledgeable"><span>Somewhat knowledgeable</span></label>
+                            <label><input type="radio" name="knowledge" value="Neutral"><span>Neutral</span></label>
+                            <label><input type="radio" name="knowledge" value="Limited knowledge"><span>Limited knowledge</span></label>
+                            <label><input type="radio" name="knowledge" value="Not knowledgeable"><span>Not knowledgeable</span></label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            6. Where do you usually receive disaster-related information?
+                        </label>
+
+                        <div class="option-grid">
+                            <label class="option-item"><input type="checkbox" name="information" value="Social media"> Social media</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="Television and radio"> Television and radio</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="Government announcements"> Government announcements</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="Schools and educational programmes"> Schools and educational programmes</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="Family and friends"> Family and friends</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="News websites"> News websites</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="I rarely receive information"> I rarely receive information</label>
+                            <label class="option-item"><input type="checkbox" name="information" value="Other"> Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 4 -->
+                <div class="question-section">
+                    <div class="question-section-title">
+                        <span>04</span>
+                        <div>
+                            <h3>Emergency Preparedness</h3>
+                            <p>Let's understand how ready households are.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            7. Does your household have an emergency preparedness plan?
+                            <span class="required">*</span>
+                        </label>
+
+                        <div class="option-grid">
+                            <label class="option-item"><input type="radio" name="plan" value="Yes" required> Yes</label>
+                            <label class="option-item"><input type="radio" name="plan" value="Partially"> Partially</label>
+                            <label class="option-item"><input type="radio" name="plan" value="No"> No</label>
+                            <label class="option-item"><input type="radio" name="plan" value="Not sure"> Not sure</label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            8. Which emergency supplies does your household have?
+                        </label>
+                        <p class="question-hint">Select all that apply.</p>
+
+                        <div class="option-grid">
+                            <label class="option-item"><input type="checkbox" name="supplies" value="Drinking water"> Drinking water</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="Non-perishable food"> Non-perishable food</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="First-aid kit"> First-aid kit</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="Flashlight"> Flashlight</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="Essential medicines"> Essential medicines</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="Important documents"> Important documents</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="Emergency communication devices"> Emergency communication devices</label>
+                            <label class="option-item"><input type="checkbox" name="supplies" value="None"> None</label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            9. How confident are you in knowing what to do during a disaster?
+                            <span class="required">*</span>
+                        </label>
+
+                        <div class="rating-options">
+                            <label><input type="radio" name="confidence" value="Very confident" required><span>Very confident</span></label>
+                            <label><input type="radio" name="confidence" value="Confident"><span>Confident</span></label>
+                            <label><input type="radio" name="confidence" value="Somewhat confident"><span>Somewhat confident</span></label>
+                            <label><input type="radio" name="confidence" value="Not very confident"><span>Not very confident</span></label>
+                            <label><input type="radio" name="confidence" value="Not confident at all"><span>Not confident at all</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 5 -->
+                <div class="question-section">
+                    <div class="question-section-title">
+                        <span>05</span>
+                        <div>
+                            <h3>Challenges & Improvements</h3>
+                            <p>Your thoughts can help us identify what needs to change.</p>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title">
+                            10. What makes it difficult for people to prepare for disasters?
+                        </label>
+
+                        <div class="option-grid">
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Lack of awareness"> Lack of awareness</label>
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Lack of financial resources"> Lack of financial resources</label>
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Lack of emergency supplies"> Lack of emergency supplies</label>
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Limited access to reliable information"> Limited access to reliable information</label>
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Lack of government or community support"> Lack of government or community support</label>
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Not knowing what actions to take"> Not knowing what actions to take</label>
+                            <label class="option-item"><input type="checkbox" name="challenges" value="Other"> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title" for="improvement">
+                            11. What could be done to improve disaster awareness and preparedness in Myanmar?
+                        </label>
+
+                        <textarea class="form-control" id="improvement" name="improvement" rows="4" placeholder="Share your suggestions here..."></textarea>
+                    </div>
+
+                    <div class="question-card">
+                        <label class="question-title" for="additional">
+                            12. Is there anything else you would like to share about disaster preparedness?
+                            <span class="optional">Optional</span>
+                        </label>
+
+                        <textarea class="form-control" id="additional" name="additional" rows="3" placeholder="Your thoughts matter to us..."></textarea>
+                    </div>
+                </div>
+
+                <!-- CONSENT -->
+                <div class="consent-card">
+                    <label class="consent-option">
+                        <input type="checkbox" id="consent" required>
+                        <span>
+                            I understand that my responses will be used for educational
+                            research and to improve disaster awareness. I voluntarily
+                            agree to participate in this survey.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- SUBMIT -->
+                <div class="submit-area">
+                    <p><i class="bi bi-info-circle"></i> Please review your answers before submitting.</p>
+
+                    <button type="submit" class="btn submit-btn">
+                        Submit Survey <i class="bi bi-send"></i>
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- SUCCESS MESSAGE -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+                <h2>Thank You for Participating!</h2>
+                <p>
+                    Your response has been recorded. Every contribution helps
+                    encourage awareness and build a more disaster-resilient community.
+                </p>
+                <button class="btn survey-btn" id="anotherResponse">
+                    Submit Another Response
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Closing section -->
+    <section class="survey-closing">
+        <div class="container">
+            <i class="bi bi-shield-check"></i>
+            <h2>Prepared Communities. Safer Futures.</h2>
+            <p>
+                Disaster preparedness begins with awareness, but it takes
+                collective action to create lasting change.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section container-fluid dark-bg">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand mb-3">
+                    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                        <span class="footer-logo-wrap">
+                            <img src="image/LIFE9-Logo.png" alt="LIFE9 logo" class="footer-logo">
+                        </span>
+                        <h3 class="footer-brand-name white-text fw-bold barlow-condensed-regular m-0">LIFE9</h3>
+                    </a>
+                </div>
+                <p class="footer-description white-text barlow-condensed-regular">
+                    The baseline for a secure tomorrow.
+                </p>
+                <div class="footer-social-links d-flex gap-3 mt-3">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="footer-media-link"><i class="bi bi-facebook"></i></a>
+                    <a href="https://web.telegram.org/" aria-label="Telegram" class="footer-media-link"><i class="bi bi-telegram"></i></a>
+                    <a href="https://x.com/" aria-label="X" class="footer-media-link"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Quick Links</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="index.html" class="footer-link white-text">Home</a></li>
+                        <li><a href="aboutus.html" class="footer-link white-text">About Us</a></li>
+                        <li><a href="news.html" class="footer-link white-text">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Explore</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li><a href="types.html" class="footer-link white-text">Types of Disasters</a></li>
+                        <li><a href="high_risk.html" class="footer-link white-text">High-risk Areas</a></li>
+                        <li><a href="faq.html" class="footer-link white-text">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-link-card p-3 h-100 d-flex flex-column">
+                    <p class="footer-heading barlow-condensed-semibold white-text">Contact Us</p>
+                    <ul class="footer-link-list list-unstyled m-0 flex-grow-1">
+                        <li>
+                            <a href="tel:+959776964436" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97769 64436
+                            </a>
+                            <a href="tel:+959740881988" class="footer-link white-text">
+                                <i class="bi bi-telephone-fill pe-1"></i> +95 97408 81988
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@life9.org" class="footer-link white-text">
+                                <i class="bi bi-envelope-fill pe-1"></i> contact@life9.org
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/PkofouHPTJ3KPXVG9" class="footer-link white-text">
+                                <i class="bi bi-geo-alt-fill pe-1"></i> Thukha Chanthar Condo, Thumana 3rd street, Yangon, Myanmar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="footer-line my-4">
+
+        <div class="container-fluid px-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-12 col-sm-6 text-center text-sm-start">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        LIFE9 © 2026 All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-6 text-center text-sm-end footer-ref-policy-text">
+                    <p class="footer-bottom-text white-text barlow-condensed-regular mb-0">
+                        <a href="policy.html" class="white-text footer-link">Privacy Policy</a>
+                        <span class="mx-1">|</span>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSbL_c72sZwKxrASTaIBeT9byPQWptYKzQbmNh1aTp_PRlJlacBZF-W8RmGcepH4gSk0lrW5FfQBq44/pub" class="white-text footer-link">References</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- External JS -->
+    <script src="external/survey.js"></script>
+    <script src="external/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Hero Section */
+.hero-section{
+    height: 600px;
+}
+.hero-section img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mission & Vision */
+.mission-vision-card{
+    background-color: white;
+    color: black;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border: 2px solid lightgray;
+}
+.mission-vision-card:hover{
+    background-color: #e1efff;
+    transform: translateY(-10px);
+}
+
+/* Purpose */
+.purpose-image{
+    transition: 0.4s ease-in-out;
+}
+.purpose-image:hover{
+    transform: translateY(-10px);
+}
+
+/* Objectives & Ambition */
+.custom-obj-card{
+    transition: 0.4s ease-in-out;
+    border: 2px solid lightgray;
+    cursor: pointer;
+}
+.custom-obj-card:hover{
+    transform: translateY(-7px);
+}
+
+/* Project Video */
+.project-video-section{
+    background-color: #f1f9ff;
+}
+.project-video{
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 7px 17px #00000014;
+}
+.project-video video{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*Creators Carousel*/
+.creators-section{
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+.creator-card{
+    width: 100%;
+    max-width: 425px;
+    min-height: 300px;
+    background-color: #880020;
+    border: 2px solid lightgray;
+    border-radius: 17px;
+    transition: transform 0.3s ease;
+}
+.creator-card:hover{
+    transform: translateY(-5px);
+}
+.creator-img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+.creator-img .tpht{
+    object-position: center 40%;
+}
+/* Carousel Controls */
+#creatorCarousel .carousel-inner{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#creatorCarousel .carousel-control-prev, #creatorCarousel .carousel-control-next{
+    width: 40px;
+}
+#creatorCarousel .carousel-control-prev{
+    left: -45px;
+}
+#creatorCarousel .carousel-control-next{
+    right: -45px;
+}
+
+/*Responsive*/
+@media (max-width: 576px){
+    #creatorCarousel .carousel-control-prev{
+        left: 0;
+    }
+    #creatorCarousel .carousel-control-next{
+        right: 0;
+    }
+}

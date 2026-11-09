@@ -1,0 +1,392 @@
+
+/* Main Layout */
+
+.hazard-layout{
+    width: 100%;
+}
+
+.hazard-main{
+    width: 100%;
+}
+
+.hazard-container{
+    max-width: 1250px;
+    padding: 45px 45px;
+    margin: 0 auto;
+}
+
+
+/* Introduction */
+
+.hazard-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 35px 40px;
+    margin-bottom: 40px;
+    background: #f1f7fc;
+    border: 1px solid #e0ebf5;
+    border-radius: 16px;
+}
+
+.header-content{
+    max-width: 800px;
+}
+
+.section-label{
+    color: #134989;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hazard-header h1{
+    color: #134989;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hazard-intro{
+    color: #606d7b;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: 0;
+}
+
+.header-icon{
+    width: 115px;
+    height: 115px;
+    min-width: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: white;
+    color: #134989;
+    font-size: 55px;
+    box-shadow: 0 5px 20px rgba(19, 73, 137, 0.08);
+}
+
+
+/* Section Headings */
+
+.map-section{
+    margin-bottom: 40px;
+}
+
+.section-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2{
+    color: #134989;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.map-description{
+    color: #777;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.map-hint{
+    color: #134989;
+    background: #f1f7fc;
+    border: 1px solid #dce8f3;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* Map Card */
+
+.map-card{
+    width: 100%;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(19, 73, 137, 0.07);
+}
+
+#hazardMap{
+    width: 100%;
+    height: 520px;
+    z-index: 1;
+}
+
+
+/* Map Legend */
+
+.map-legend{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 22px;
+    background-color: #fff;
+    border-top: 1px solid #e9edf2;
+    color: #606d7b;
+    font-size: 14px;
+}
+
+.legend-title{
+    color: #134989;
+    font-weight: 600;
+}
+
+.map-legend > span{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.legend-dot{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #134989;
+    box-shadow: 0 0 0 4px rgba(19, 73, 137, 0.12);
+}
+
+
+/* Region Information */
+
+.regions-section{
+    padding: 35px 40px;
+    margin-bottom: 35px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(19, 73, 137, 0.06);
+}
+
+.region-content{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.region-icon{
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background-color: #f1f7fc;
+    color: #134989;
+    font-size: 35px;
+}
+
+.region-text{
+    flex: 1;
+}
+
+.region-text h2{
+    color: #134989;
+    font-size: 29px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.region-text > p:not(.section-label){
+    color: #6b7280;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 750px;
+    margin-bottom: 18px;
+}
+
+
+/* Explore Button */
+
+.explore-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    background-color: #134989;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.explore-btn:hover{
+    background-color: #0d3565;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(19, 73, 137, 0.2);
+}
+
+
+/* Leaflet Popup Styling */
+
+.leaflet-popup-content-wrapper{
+    border-radius: 10px;
+}
+
+.leaflet-popup-content{
+    font-family: inherit;
+    line-height: 1.6;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 998px){
+
+    .hazard-container{
+        padding: 35px 25px;
+    }
+
+    .hazard-header{
+        padding: 30px;
+    }
+
+    .hazard-header h1{
+        font-size: 40px;
+    }
+
+    .header-icon{
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        font-size: 42px;
+    }
+
+    #hazardMap{
+        height: 450px;
+    }
+
+    .section-heading h2{
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .hazard-container{
+        padding: 30px 20px;
+    }
+
+    .hazard-header{
+        padding: 25px;
+    }
+
+    .hazard-header h1{
+        font-size: 35px;
+    }
+
+    .header-icon{
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        font-size: 32px;
+    }
+
+    .section-heading{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .map-hint{
+        white-space: normal;
+    }
+
+    #hazardMap{
+        height: 400px;
+    }
+
+    .regions-section{
+        padding: 30px;
+    }
+
+    .region-text h2{
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 576px){
+
+    .hazard-container{
+        padding: 25px 15px;
+    }
+
+    .hazard-header{
+        padding: 25px 20px;
+    }
+
+    .hazard-header h1{
+        font-size: 30px;
+    }
+
+    .hazard-intro{
+        font-size: 15px;
+    }
+
+    .header-icon{
+        display: none;
+    }
+
+    .section-heading h2{
+        font-size: 25px;
+    }
+
+    .map-description{
+        font-size: 14px;
+    }
+
+    #hazardMap{
+        height: 350px;
+    }
+
+    .map-legend{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 13px 16px;
+    }
+
+    .regions-section{
+        padding: 25px 20px;
+    }
+
+    .region-content{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .region-icon{
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        font-size: 28px;
+    }
+
+    .region-text h2{
+        font-size: 23px;
+    }
+}
